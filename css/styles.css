@@ -1,0 +1,440 @@
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('type/myriadpro-regular-webfont.eot');
+	src: local('☺'), url('type/myriadpro-regular-webfont.woff') format('woff'), url('type/myriadpro-regular-webfont.ttf') format('truetype'), url('type/myriadpro-regular-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*****  CSS RESET ******/
+
+h1, h2, h3, p, ul, dl, dt {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+/**** END RESET ********/
+
+
+
+body, textarea {
+	font-family: "Myriad Pro", Helvetica, Arial;
+}
+
+body {
+	background: #000 url('../images/wood_bg.jpg') top center fixed;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+#main_wrapper {
+	margin: auto;
+	width: 940px;
+	position: relative;
+	padding-top: 30px;
+}
+
+#content_wrapper {
+	padding: 10px 10px 0px 10px;
+	background: rgba(256, 256, 256, 0.28);
+	width: 843px;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+}
+
+#content {
+	background: rgba(256, 256, 256, 0.47);
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+}
+
+.clearBoth {
+	clear: both;
+}
+
+/***** Header Styles *****/
+
+#header {
+	height: 75px;
+	background: url('../images/title_logo.png') no-repeat;
+	margin-left: 30px;
+}
+
+#header h1 {
+	display: none;
+}
+
+/*** END HEADER STYLES ***/
+
+
+/****  Nav Styles  *****/
+#nav {
+	font-size: 12px;
+	font-weight: bold;
+	position: absolute;
+	left: 853px;
+	float: right;
+	top: 134px;
+}
+
+#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+}
+
+#nav li {
+	margin-top: 33px;
+}
+
+#nav a {
+	outline: none;
+	padding: 10px 15px 10px 10px;
+	background-color: #068600;
+	border-left: 10px solid #4BA747;
+	box-shadow: 2px 2px 4px rgba(1,0,0, 0.42);
+	-moz-box-shadow: 2px 2px 4px rgba(1,0,0, 0.42);
+	-webkit-box-shadow: 2px 2px 4px rgba(1,0,0, 0.42);
+	cursor: pointer;
+}
+
+#nav a,
+#nav a:hover,
+#nav a:visited,
+#nav a:active {
+	color: white;
+	text-decoration: none;
+}
+
+#beam_nav_link {
+	display: block;
+	margin-top: 60px;
+}
+/****** END NAV STYLES ******/
+
+
+
+/****** CONTENT STYLES ******/
+
+/***** COMMON *****/
+.section_banner {
+	height: 28px;
+	margin-left: -20px;
+	padding: 5px 0 5px 35px;
+	font-size: 16px;
+	background: url('../images/section_banner.png') no-repeat top left;
+}
+
+#whatido, #mywork, #about, #contact {
+	background-color: rgba(247, 242, 234, .66);
+}
+
+#whatido, #mywork, #about {
+	margin-bottom: 40px;
+}
+
+#whatido, #about {
+	float: left;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+#mywork_banner, #contact_banner {
+	clear: both;
+}
+
+.section h2 {
+	color: #41382c;
+	font-size: 48px;
+	padding-left: 15px;
+	text-shadow: 1px 2px 2px rgba(122, 122, 122, .49);
+}
+
+.section p {
+	color: #24221e;
+	font-size: 14px;
+}
+
+
+
+/***** INTRO ****/
+#intro span {
+	color: #ff8023;
+}
+
+#intro, #salutation {
+	color: #24221e;
+	font-size: 30px;
+	font-weight: bold;
+	padding-left: 50px;
+	padding-right: 40px;
+}
+
+#salutation {
+	padding-top: 40px;
+}
+
+
+
+/***** WHAT I DO ****/
+#services_banner {
+	margin-top: 75px;
+}
+
+#whatido h1 {
+	font-size: 24px;
+	color: #24221e;
+}
+
+#whatido div {
+	float: left;
+	margin: 10px 0 0 20px;
+	width: 256px;
+}
+
+
+
+/**** MY WORK ****/
+
+#mywork {
+	padding-bottom: 30px;
+}
+
+#career_listing {
+	margin-left: 40px;
+}
+
+#mywork p {
+	padding-left: 15px;
+	padding-right: 40px;
+}
+
+#mywork h3 {
+	padding-left: 15px;
+	color: #24221e;
+	padding-top: 20px;
+}
+
+.work_link {
+	float: left;
+}
+
+#et_link {
+	margin: 15px 0 0 15px;
+}
+
+#cc_link, #cb_link {
+	margin: 0 0 0 75px;
+}
+
+#cc_link {
+	margin-top: 6px;
+}
+
+#cb_link {
+	margin: -32px 0 0 85px;
+}
+
+#t_link {
+	margin: 15px 0 20px 15px; 
+	display: block;
+}
+
+.portfolio_item {
+	margin: 30px 0 0 0;
+	overflow: hidden;
+}
+
+.portfolio_item h4 {
+	background-color: #545a89;
+	box-shadow: 2px 2px 4px rgba(1,0,0, 0.42);
+	-moz-box-shadow: 2px 2px 4px rgba(1,0,0, 0.42);
+	-webkit-box-shadow: 2px 2px 4px rgba(1,0,0, 0.42);
+	padding: 5px 10px 5px 15px;
+	width: 240px;
+}
+
+.portfolio_item ul {
+	list-style-type: none;
+}
+
+.portfolio_item ul li {
+	font-size: 25px;
+	font-weight: bold;
+	color: #c7894e;
+}
+
+.portfolio_item dt {
+	font-size: 18px;
+	font-weight: bold;
+	color: #41382c;
+}
+
+.port_thumb {
+	background-color: white;
+	padding: 4px;
+	border: 1px solid #d6d4d2;
+	margin-left: 15px;
+	float: left;
+}
+
+.project_resp {
+	margin-left: 432px;
+}
+
+/*** ABOUT ME ****/
+#about div {
+	float: left;
+	
+}
+
+#bio {
+	width: 57%;
+	padding-left: 15px;
+}
+
+#bio p {
+	padding-bottom: 15px;
+}
+
+#bio span {
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+#social_networks {
+	padding-left: 40px;
+	width: 300px;
+	margin-top: -12px;
+}
+
+#social_networks p {
+	font-size: 24px;
+	font-weight: bold;
+	width: 210px;
+}
+
+#social_icons_holder {
+	padding-bottom: 10px;
+}
+
+#social_icons_holder a {
+	float: left;
+	outline: none;
+	margin: 10px 36px 5px 0px;
+}
+
+#resume_dwnload_link {
+	display: block;
+	height: 32px;
+	clear: both;
+	background: url('../images/pdf.png') no-repeat top left;
+	padding-left: 41px;
+	line-height: 33px;
+}
+
+
+/**** CONTACT ****/
+#contact {
+	height: 500px;
+}
+
+#contact input {
+	outline: none;
+}
+
+#contact div {
+	float: left;
+}
+
+#contact_blurb {
+	width: 357px;
+	padding: 0px 40px 0px 15px;
+}
+
+#contact p {
+	padding-bottom: 15px;
+}
+
+#work_status {
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 30px;
+	padding-right: 125px;
+	text-align: center;
+}
+
+#name, #email {
+	padding-top: 9px;
+}
+
+#name, #email, #message {
+	font-size: 18px;
+	width: 392px;
+	border: 0;
+	padding-left: 8px;
+	color: #69655d;
+}
+
+#message {
+	height: 178px;
+	max-width: 392px;
+	max-height: 178px;
+	padding-top: 7px;
+}
+
+#contact_form .inset_drop {
+	background-color: white;
+	padding: 5px 0 0 5px;
+	box-shadow: inset 2px 2px 4px rgba(1,0,0, 0.31);
+	-moz-box-shadow: inset 2px 2px 4px rgba(1,0,0, 0.31);
+	-webkit-box-shadow: 2px 2px 4px rgba(1,0,0, 0.31) inset;
+}
+
+#contact_form .small_shadow_holder {
+	height: 46px;
+	margin-bottom: 24px;
+}
+
+#btn_submit_cf {
+	float: right;
+	margin: 15px 348px 0 0;
+	background: url('../images/submit_btn.png') no-repeat top left;
+	border: 0;
+	width: 83px;
+	height: 32px;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/**** END CONTENT STYLES ****/
+
+
+
+/**** FOOTER STYLES *****/
+
+#footer {
+	width: 863px;
+	background-color: #dc4f17;
+	padding: 15px 0;
+	text-align: center;
+}
+
+/*** END FOOTER STYLES ***/
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('type/myriadpro-bold-webfont.eot');
+	src: local('☺'), url('type/myriadpro-bold-webfont.woff') format('woff'), url('type/myriadpro-bold-webfont.ttf') format('truetype'), url('type/myriadpro-bold-webfont.svg#webfont') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
