@@ -17,6 +17,12 @@ img {
 	border: 0;
 }
 
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
 /**** END RESET ********/
 
 
@@ -26,7 +32,7 @@ body, textarea {
 }
 
 body {
-	background: #000 url('../images/wood_bg.jpg') top center fixed;
+	background: #CF7126 url('../images/wood_bg.jpg') top center fixed;
 	color: white;
 	margin: 0;
 	padding: 0;
@@ -68,7 +74,7 @@ body {
 }
 
 #header h1 {
-	display: none;
+	text-indent: -9000px;
 }
 
 /*** END HEADER STYLES ***/
@@ -85,9 +91,6 @@ body {
 }
 
 #nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
 	position: fixed;
 }
 
@@ -114,7 +117,7 @@ body {
 	text-decoration: none;
 }
 
-#beam_nav_link {
+#up_nav_link {
 	display: block;
 	margin-top: 60px;
 }
@@ -153,26 +156,33 @@ body {
 
 .section h2 {
 	color: #41382c;
-	font-size: 48px;
+	font-size: 40px;
 	padding-left: 15px;
 	text-shadow: 1px 2px 2px rgba(122, 122, 122, .49);
+	width: 240px;
 }
 
 .section p {
 	color: #24221e;
 	font-size: 14px;
+	line-height: 20px;
 }
 
+.description_section p {
+	padding-bottom: 15px;
+	color: #423b31;
+}
 
 
 /***** INTRO ****/
-#intro span {
+.intro span {
 	color: #ff8023;
+	font-size: 30px;
 }
 
-#intro, #salutation {
+.intro, #salutation {
 	color: #24221e;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: bold;
 	padding-left: 50px;
 	padding-right: 40px;
@@ -182,25 +192,111 @@ body {
 	padding-top: 40px;
 }
 
+span.ashamed {
+	font-size: 18px;
+	padding-left: 20px;
+	color: #ff8023;
+}
 
 
 /***** WHAT I DO ****/
 #services_banner {
-	margin-top: 75px;
+	margin-top: 45px;
 }
 
 #whatido h1 {
-	font-size: 24px;
-	color: #24221e;
+	font-size: 23px;
+	color: #645d54;
+	font-weight: normal;
+	font-style: italic;
+	padding: 12px 0 12px 62px;
 }
 
-#whatido div {
+#web_dev_section {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+#web_dev_section .description_section h1 {
+	background: url('../images/blueprint.png') no-repeat top left;
+}
+
+#dev_skill_section,
+#ux_skill_section {
+	font-weight: bold;
+	font-size: 20px;
+	padding:  14px 0 0 380px;
+}
+
+
+#dev_skill_section ul li ul {
+	font-size: 16px;
+	padding-left: 8px;
+}
+
+.skill_column {
 	float: left;
-	margin: 10px 0 0 20px;
-	width: 256px;
+	margin-right: 40px;
 }
 
+.description_section {
+	float: left;
+	width: 320px;
+	padding-left: 15px;
+}
 
+#front_end_list {
+	color: #ff8023;
+	padding-bottom: 9px;
+}
+
+#front_end_list ul {
+	color: #ea9e67;
+}
+
+#database_list {
+	color: #c84618;
+}
+
+#server_side_list {
+	color: #476edd;
+}
+
+#server_side_list ul {
+	color: #7996ee;
+}
+
+#api_list {
+	color: #0f6b0a;
+}
+
+#api_list ul {
+	color: #42b33c;
+	padding-bottom: 10px;
+}
+
+#other_list {
+	color: #78478c;
+	line-height: 23px;
+}
+
+#ux_section .description_section h1 {
+	background: url('../images/person.png') no-repeat top left;
+}
+
+#ux_skill_section {
+	color: #78478C;
+}
+
+#ux_skill_section ul {
+	width: 250px;
+	text-align: center;
+	padding-left: 70px;
+}
+
+#ux_skill_section li {
+	padding-bottom: 25px;
+}
 
 /**** MY WORK ****/
 
@@ -313,7 +409,7 @@ body {
 #social_networks {
 	padding-left: 40px;
 	width: 300px;
-	margin-top: -12px;
+	margin-top: -5px;
 }
 
 #social_networks p {
@@ -323,7 +419,7 @@ body {
 }
 
 #social_icons_holder {
-	padding-bottom: 10px;
+	padding-bottom: 26px;
 }
 
 #social_icons_holder a {
@@ -361,7 +457,7 @@ body {
 }
 
 #contact p {
-	padding-bottom: 15px;
+	padding-top: 15px;
 }
 
 #work_status {
@@ -416,6 +512,12 @@ body {
 	font-size: 16px;
 }
 
+#required_msg {
+	display: block;
+	padding-bottom: 4px;
+	color: #24221E;
+}
+
 /**** END CONTENT STYLES ****/
 
 
@@ -437,4 +539,12 @@ body {
 	src: local('☺'), url('type/myriadpro-bold-webfont.woff') format('woff'), url('type/myriadpro-bold-webfont.ttf') format('truetype'), url('type/myriadpro-bold-webfont.svg#webfont') format('svg');
 	font-weight: bold;
 	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('type/myriadpro-it-webfont.eot');
+	src: local('☺'), url('type/myriadpro-it-webfont.woff') format('woff'), url('type/myriadpro-it-webfont.ttf') format('truetype'), url('type/myriadpro-it-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
 }

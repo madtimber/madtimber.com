@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 
-		<title>Madtimber - Web Development, Design, and User Experience</title>
+		<title>Madtimber - Web Development, Web Design, and User Experience</title>
 		<link type="text/css" href="css/styles.css" rel="stylesheet">
 		<link type="text/css" href="css/reset.css" rel="stylesheet">
 		<!--[if gte IE 7]>
@@ -20,52 +20,133 @@
 	<body>
 		
 		<div id="main_wrapper">
+			
+			<div id="header">
+				<h1>MadTimber: Development, Design, Experience</h1>
+			</div>
+			
 			<!-- NAV SECTION -->
 			<div id="nav"> 
 				<ul>
 					<li><a href="#" id="home_nav_link">HOME</a></li>
 					<li><a href="#" id="services_nav_link">SERVICES</a></li>
 					<li><a href="#" id="work_nav_link">WORK</a></li>
+					<!-- ><li><a href="#" id="blog_nav_link">BLOG</a></li> -->
+					<!-- ><li><a href="#" id="madlab_nav_link">MAD LAB</a></li> -->
 					<li><a href="#" id="about_nav_link">ABOUT</a></li>
 					<li><a href="#" id="contact_nav_link">CONTACT</a></li>
-					<li><a href="#" id="beam_nav_link">BACK UP^</a></li>
+					<li><a href="#" id="up_nav_link">BACK UP^</a></li>
 				</ul>
 			</div><!-- END NAV SECTION -->
-			
-			<div id="header">
-				<h1>MadTimber</h1>
-			</div>
 		
 			<div id="content_wrapper">			
 				<div id="content">
 					<p id="salutation">
-						Hi.
+						Hello.
 					</p>
-					<p id="intro">
-						I'm Todd Baker, a <span>Web Developer</span> and <span>Designer</span>, with a great passion for <span>UI Design</span>, <span>User Experience</span> and am a proponent of a <span>standards</span> based, <span>semantic</span> web.
+					<p class="intro">
+						I'm Todd Baker, a freelance <span>Web Developer</span> and <span>Designer</span>.
 					</p>
-					
+					<p class="intro">I specialize in <span>User Interface</span> design/architecture of applications.</p>
+					<p class="intro">I also sling code in Javascript, PHP, Python, and Java.</p>
 					<!-- SERVICES SECTION -->
 					<h2 id="services_banner" class="section_banner">My Services...</h2>
 					<div id="whatido" class="section">
 						<h2>WHAT I DO</h2>
-						<div>
-							<h1>Web Development</h1>
-							<p>
-								I provide a wide range of development services, ranging from font-end  development (HTML, CSS, Javascript), to middle tier coding (PHP, Java, C#/.NET) and back-end database persistence (MySQL, MS SQL). I’m also familiar with a number of web frameworks, including:  .NET, Struts, Spring, CakePHP, Code Ignighter, jQuery, mooTools and prototype.
-							</p>
+						<div id="web_dev_section">
+							<div class="description_section">
+								<h1>Web Development &nbsp;&nbsp;>></h1>
+								<p>
+									I’ve been developing for the web for over 10 years, of which six have been in a professional setting.  The list to the right lists most (but not all) technologies and methodologies that I’ve either worked extensively with, or are currently using right now.
+								</p>
+								<p>
+									I’m very familiar with MVC architecture as well as front-end best practices with respects to: Ajax, performance, and cross browser techniques.
+								</p>
+								<p>
+									Some of the tools I use include:  textmate, eclipse, Photoshop, Fireworks, Illustrator, and Parallels.
+								</p>
+							</div>
+							<div id="dev_skill_section">
+								<div class="skill_column">
+									<ul id="front_end_list">
+										<li>HTML</li>
+										<li>CSS</li>
+										<li>AJAX</li>
+										<li>Javascript
+											<ul>
+												<li>jQuery</li>
+												<li>mooTools</li>
+												<li>YUI</li>
+											</ul>
+										</li>
+									</ul>
+									<ul id="database_list">
+										<li>MySQL</li>
+										<li>MSSQL</li>
+										<li>Cassandra</li>
+									</ul>
+								</div>
+								<div class="skill_column">
+									<ul id="server_side_list">
+										<li>Java
+											<ul>
+												<li>Struts</li>
+												<li>Spring</li>
+											</ul>
+										</li>
+										<li>PHP
+											<ul>
+												<li>CakePHP</li>
+												<li>CodeIgnighter</li>
+												<li>Agavi</li>
+												<li>WordPress</li>
+											</ul>
+										</li>
+										<li>Python
+											<ul>
+												<li>Django</li>
+											</ul>
+										</li>
+										<li>C#/.Net</li>
+									</ul>
+								</div>
+								<div class="skill_column">
+									<ul id="api_list">
+										<li>APIs
+											<ul>
+												<li>Salesforce</li>
+												<li>Delicious</li>
+												<li>Facebook</li>
+												<li>Twitter</li>
+												<li>Digg</li>
+											</ul>
+										</li>
+									</ul>
+									<ul id="other_list">
+										<li>Apache</li>
+										<li>Memcache</li>
+										<li>TDD</li>
+										<li>Unit Testing</li>
+										<li>Agile/Scrum</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<div>
-							<h1>User Experience</h1>
-							<p>
-								During my ten years of web development/design (6 professionally), I’ve had the opportunity to work with some extraordinary people and companies (ExactTarget, ChaCha, Compendium Blogware, Tuitive).  While with these companies, I’ve lead and mentored UI teams, designed and developed cutting edge software, managed offshore teams, and handled many aspects of project management.
-							</p>
-						</div>
-						<div>
-							<h1>Web Design</h1>
-							<p>
-								My design experience encompasses the entire iterative design life cycle:  idea conception, requirements gathering, wire framing, prototyping, usability testing,  hi-fi mockups.  I believe that key to creating great web applications and products is to design well upfront, keeping the users needs at the forefront of every design decision and discussion.
-							</p>
+						<div id="ux_section">
+							<div class="description_section">
+								<h1>User Experience &nbsp;&nbsp;>></h1>
+								<p>
+									Putting your users' needs first in any project will always yield great results.  That's why I use these techniques extensively through out the design process.
+								</p>
+							</div>
+							<div id="ux_skill_section">
+								<ul>
+									<li>Information Architecture</li>
+									<li>Wire Framing</li>
+									<li>Prototyping</li>
+									<li>Usability Testing</li>
+								</ul>
+							</div>
 						</div>
 					</div><!-- SERVICES SECTION -->
 									
@@ -74,7 +155,7 @@
 					<div id="mywork" class="section">
 						<h2>MY WORK</h2>
 						<p>
-							I’ve been fortunate to work at/with some great startups (one, who is not such a startup anymore!):
+							I’ve been fortunate to work at some great startups (one, who isn't such a startup anymore!):
 						</p>
 						<div id="career_listing">
 							<h3>Full Time:</h3>
@@ -146,7 +227,7 @@
 						<h2>ABOUT ME</h2>
 						<div id="bio">
 							<p>
-								My passion is designing and developing web sites and applications that are forward thinking, user centric, and contain only the most impeccable markup and code.
+								I've been developing for the web for over <strong>10 years</strong>, six of which have been in a professional setting. My passion is designing and developing web sites and applications that are user centric and contain only the most impeccable markup and code.
 							</p>
 
 							<p>
@@ -157,7 +238,7 @@
 								In my spare time, you can find me checking out almost any band that I can find, watching movies (Caddyshack for the 56th time), playing guitar or hitting the links for a nice round of small ball.
 							</p>
 
-							<p>Current Home: <span>Indianapolis, IN<span></p>
+							<p>Current Home: <span>Indianapolis, IN</span></p>
 						</div>
 						<div id="social_networks">
 							<p>You can find more of me here:</p>
@@ -176,7 +257,7 @@
 					<!-- CONTACT SECTION -->
 					<h2 id="contact_banner" class="section_banner">Hit me up...</h2>
 					<div id="contact" class="section">
-						<h2>TALK TO ME</h2>
+						<h2>SAY HELLO</h2>
 						<div id="contact_blurb">
 							<p>
 								Feel free to send me an email anytime.  If its just a ‘hey, how ya doin’ email, it may take me a day or two to get back to you, but I will respond.
@@ -191,10 +272,11 @@
 							</p>
 							<p id="work_status">Currently accepting new projects.</p>
 						</div>
-						<form id="contact_form" method="POST" url="#">
+						<form id="contact_form" method="POST" target="#">
+							<span id="required_msg">* all fields required</span>
 							<div class="inset_drop small_shadow_holder"><input id="name" name="name" type="text" value="name" /></div>
 							<div class="inset_drop small_shadow_holder"><input id="email" name="email" type="text" value="email" /></div>
-							<div class="inset_drop"><textarea id="message" name="message">message</textarea></div>
+							<div class="inset_drop"><textarea id="message" name="message" value="message">message</textarea></div>
 							<input id="btn_submit_cf" type="submit" value="SEND" />
 						</form>
 					</div><!-- END CONTACT SECTION -->				

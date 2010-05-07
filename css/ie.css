@@ -30,13 +30,21 @@
 	padding-right: 20px;
 }
 
-#whatido div {
-	width: 30%;
-}
-
 .section_banner {
 	width: 400px;
 	margin-left: -10px;
+}
+
+#front_end_list {
+	line-height: 25px;
+}
+
+#server_side_list {
+	line-height: 23px;
+}
+
+#database_list {
+	line-height: 23px;
 }
 
 .portfolio_item {
@@ -56,6 +64,10 @@
 
 #social_networks {
 	padding-left: 35px;
+}
+
+#contact_form {
+	margin-top: -5px;
 }
 
 #btn_submit_cf {
