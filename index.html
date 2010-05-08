@@ -12,15 +12,33 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script>
 			$(document).ready(function() {
-				// do stuff
+				
+				
+				// scrolling nav
+				$("#nav a").click(function(e) {
+					var anchor = this.href.split('#')[1];
+					var scrollTo = $("a[name='" + anchor + "']");
+										
+					if($(document).height()-scrollTo.offset().top >= $(window).height()
+					      || scrollTo.offset().top > $(window).height()) {
+						
+							$('html, body').animate({
+								scrollTop: scrollTo.offset().top-45
+								}, 
+								'slow', 
+								'swing'
+							);
+					}
+					return false;
+				});
+				
 			});
 		</script>
 	</head>
 	
 	<body>
-		
+		<a name="home"></a>
 		<div id="main_wrapper">
-			
 			<div id="header">
 				<h1>MadTimber: Development, Design, Experience</h1>
 			</div>
@@ -28,14 +46,14 @@
 			<!-- NAV SECTION -->
 			<div id="nav"> 
 				<ul>
-					<li><a href="#" id="home_nav_link">HOME</a></li>
-					<li><a href="#" id="services_nav_link">SERVICES</a></li>
-					<li><a href="#" id="work_nav_link">WORK</a></li>
-					<!-- ><li><a href="#" id="blog_nav_link">BLOG</a></li> -->
-					<!-- ><li><a href="#" id="madlab_nav_link">MAD LAB</a></li> -->
-					<li><a href="#" id="about_nav_link">ABOUT</a></li>
-					<li><a href="#" id="contact_nav_link">CONTACT</a></li>
-					<li><a href="#" id="up_nav_link">BACK UP^</a></li>
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#serv">SERVICES</a></li>
+					<li><a href="#wrk">WORK</a></li>
+					<!-- ><li><a href="#" >BLOG</a></li> -->
+					<!-- ><li><a href="#" >MAD LAB</a></li> -->
+					<li><a href="#abt">ABOUT</a></li>
+					<li><a href="#cont">CONTACT</a></li>
+					<li><a href="#home" id="up_nav_link">BACK UP^</a></li>
 				</ul>
 			</div><!-- END NAV SECTION -->
 		
@@ -49,8 +67,10 @@
 					</p>
 					<p class="intro">I specialize in <span>User Interface</span> design/architecture of applications.</p>
 					<p class="intro">I also sling code in Javascript, PHP, Python, and Java.</p>
-					<!-- SERVICES SECTION -->
+					
+					<!-- SERVICES SECTION -->	
 					<h2 id="services_banner" class="section_banner">My Services...</h2>
+					<a name="serv" id="serv"></a>
 					<div id="whatido" class="section">
 						<h2>WHAT I DO</h2>
 						<div id="web_dev_section">
@@ -155,6 +175,7 @@
 									
 					<!-- WORK SECTION -->
 					<h2 id ="mywork_banner" class="section_banner">What I've done in the past...</h2>
+					<a name="wrk" id="wrk"></a>
 					<div id="mywork" class="section">
 						<h2>MY WORK</h2>
 						<p>
@@ -226,6 +247,7 @@
 									
 					<!-- ABOUT SECTION -->
 					<h2 class="section_banner">Who is Todd?...</h2>
+					<a name="abt" id="abt"></a>
 					<div id="about" class="section">
 						<h2>ABOUT ME</h2>
 						<div id="bio">
@@ -253,12 +275,13 @@
 								<a href="http://blip.fm/madtimber"><img src="images/blip_48.png" alt="blip.fm profile" title="blip.fm profile"/></a>
 								<a href="http://toddlb.tumblr.com/"><img src="images/tumblr_48.png" alt="tumblr profile" title="tumblr profile"/></a>
 							</div>
-							<a id="resume_dwnload_link" href="#">Download my resume (PDF)</a>
+							<a id="resume_dwnload_link" href="./docs/resume_todd_baker.pdf">Download my resume (PDF)</a>
 						</div>
 					</div><!-- END ABOUT SECTION -->
 					
 					<!-- CONTACT SECTION -->
 					<h2 id="contact_banner" class="section_banner">Hit me up...</h2>
+					<a name="cont" id="cont"></a>
 					<div id="contact" class="section">
 						<h2>SAY HELLO</h2>
 						<div id="contact_blurb">
