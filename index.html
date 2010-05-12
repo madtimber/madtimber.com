@@ -6,34 +6,13 @@
 		<title>Madtimber - Web Development, Web Design, and User Experience</title>
 		<link type="text/css" href="css/styles.css" rel="stylesheet">
 		<link type="text/css" href="css/reset.css" rel="stylesheet">
+		<link type="text/css" href="css/jquery.fancybox-1.3.1.css" rel="stylesheet">
 		<!--[if gte IE 7]>
 		<link type="text/css" href="css/ie.css" rel="stylesheet">
 		<![endif]-->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				
-				
-				// scrolling nav
-				$("#nav a").click(function(e) {
-					var anchor = this.href.split('#')[1];
-					var scrollTo = $("a[name='" + anchor + "']");
-										
-					if($(document).height()-scrollTo.offset().top >= $(window).height()
-					      || scrollTo.offset().top > $(window).height()) {
-						
-							$('html, body').animate({
-								scrollTop: scrollTo.offset().top-45
-								}, 
-								'slow', 
-								'swing'
-							);
-					}
-					return false;
-				});
-				
-			});
-		</script>
+		<!--[if lt IE 7]>
+		<link type="text/css" href="css/ie6.css" rel="stylesheet">
+		<![endif]-->
 	</head>
 	
 	<body>
@@ -46,14 +25,14 @@
 			<!-- NAV SECTION -->
 			<div id="nav"> 
 				<ul>
-					<li><a href="#home">HOME</a></li>
+					<!-- ><li><a href="#home">HOME</a></li> -->
 					<li><a href="#serv">SERVICES</a></li>
 					<li><a href="#wrk">WORK</a></li>
 					<!-- ><li><a href="#" >BLOG</a></li> -->
 					<!-- ><li><a href="#" >MAD LAB</a></li> -->
 					<li><a href="#abt">ABOUT</a></li>
 					<li><a href="#cont">CONTACT</a></li>
-					<li><a href="#home" id="up_nav_link">BACK UP^</a></li>
+					<li><a href="#home" id="up_nav_link" >BACK UP</a></li>
 				</ul>
 			</div><!-- END NAV SECTION -->
 		
@@ -66,7 +45,7 @@
 						I'm Todd Baker, a freelance <span>Web Developer</span> and <span>Designer</span>.
 					</p>
 					<p class="intro">I specialize in <span>User Interface</span> design/architecture of applications.</p>
-					<p class="intro">I also sling code in Javascript, PHP, Python, and Java.</p>
+					<p class="intro last_intro">I also sling code in Javascript, PHP, Python, and Java.</p>
 					
 					<!-- SERVICES SECTION -->	
 					<h2 id="services_banner" class="section_banner">My Services...</h2>
@@ -195,7 +174,9 @@
 						</p>
 						<div class="portfolio_item">
 							<h4>ChaCha - Answer Detail Page</h4>
-							<img src="images/cc-answerdetail-thumb.jpg" width="326" height="197" alt="Cha Cha Answer Detail Page" class="port_thumb">
+							<a id="cc-answer-detail" rel="port1" href="images/portfolio/qna-full.jpg"><img src="images/portfolio/cc-answerdetail-thumb.jpg" width="326" height="197" alt="Cha Cha - Answer Detail Page" class="port_thumb" /></a>
+							<a id="cc-answer-detail" rel="port1" href="images/portfolio/qna-wireframe2.png" class="hidden" title="Cha Cha - Answer Detail Page Wireframe"></a>
+							<a id="cc-answer-detail" rel="port1" href="images/portfolio/qna-wireframe.png" class="hidden" title="Cha Cha - Answer Detail Page Wireframe"></a>
 							<dl class="project_resp">
 								<dt>Responsible for:</dt>
 								<dd>
@@ -212,7 +193,16 @@
 						</div>
 						<div class="portfolio_item">
 							<h4>ChaCha - Guide Application</h4>
-							<img src="images/cc-guideapp-thumb.jpg" width="326" height="197" alt="Cha Cha Guide Application" class="port_thumb">
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/gen1.png"><img src="images/portfolio/cc-guideapp-thumb.jpg" width="326" height="197" alt="Cha Cha Guide Application" class="port_thumb"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/gen2.png" class="hidden" title="Cha Cha Guide Application - General Guide Screen"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/gen3.png" class="hidden" title="Cha Cha Guide Application - General Guide Screen"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/qv1.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/qv2.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/qv4.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/transcriber.png" class="hidden" title="Cha Cha Guide Application - Transcriber Screen"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/expedite-redesign1.png" class="hidden" title="Cha Cha Guide Application - Expeditor Redesign Wirframe"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/expedite-redesign2.png" class="hidden" title="Cha Cha Guide Application  - Expeditor Redesign Wirframe"></a>
+							<a id="cc-guide-app" rel="port2" href="images/portfolio/expedite-redesign3.png" class="hidden" title="Cha Cha Guide Application  - Expeditor Redesign Wirframe"></a>
 							<dl class="project_resp">
 								<dt>Responsible for:</dt>
 								<dd>
@@ -229,7 +219,7 @@
 						</div>
 						<div class="portfolio_item">
 							<h4>Personal - Hamming Distance</h4>
-							<img src="images/hamming-thumb.jpg" width="326" height="197" alt="Hamming Distance" class="port_thumb">
+							<a id="hamming" href="images/portfolio/hamming-full.jpg"><img src="images/portfolio/hamming-thumb.jpg" width="326" height="197" alt="Hamming Distance" class="port_thumb"></a>
 							<dl class="project_resp">
 								<dt>Responsible for:</dt>
 								<dd>
@@ -298,12 +288,13 @@
 							</p>
 							<p id="work_status">Currently accepting new projects.</p>
 						</div>
-						<form id="contact_form" method="POST" target="#">
+						<form id="contact_form" method="POST" target="contact.php">
 							<span id="required_msg">* all fields required</span>
-							<div class="inset_drop small_shadow_holder"><input id="name" name="name" type="text" value="name" /></div>
-							<div class="inset_drop small_shadow_holder"><input id="email" name="email" type="text" value="email" /></div>
-							<div class="inset_drop"><textarea id="message" name="message" value="message">message</textarea></div>
-							<input id="btn_submit_cf" type="submit" value="SEND" />
+							<div class="inset_drop small_shadow_holder"><input id="name" name="name" type="text" value="name" tabindex="1"/></div>
+							<div class="inset_drop small_shadow_holder"><input id="email" name="email" type="text" value="email" tabindex="2"/></div>
+							<div class="inset_drop"><textarea id="message" name="message" value="message" tabindex="3">message</textarea></div>
+							<span id="confirm_msg"></span>
+							<input id="btn_submit_cf" type="submit" value="SEND" tabindex="4"/>
 						</form>
 					</div><!-- END CONTACT SECTION -->				
 					
@@ -313,5 +304,132 @@
 			<div id="footer">&copy; 2010 Todd Baker - Designed with Photoshop on a 27” iMac</div>
 				
 		</div> <!-- END MAIN_WRAPPER -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox-1.3.1.pack.js"></script>
+		<script type="text/javascript" src="js/jquery.easing-1.3.pack.js"></script>
+		<script>
+			$(document).ready(function() {
+				
+				// form blur/focus effects
+				$("#contact_form input, textarea").focus(function() {
+					if(this.value == this.id) {
+						$(this).val('');
+					}
+				}).blur(function() {
+					if(this.value == ''){
+						this.value = this.id;
+					} 
+				});
+				
+				// scrolling nav
+				$("#nav a").click(function(e) {
+					var anchor = this.href.split('#')[1];
+					var scrollTo = $("a[name='" + anchor + "']");
+
+					$('html, body').animate({
+						scrollTop: scrollTo.offset().top-45
+						}, 
+						900, 
+						'swing'
+					);
+					
+					return false;
+				});
+				
+				
+				// back-up button toggle
+				$(window).scroll(function() {
+					var scrollYPos = $(this).scrollTop();
+					
+					if(scrollYPos > 700) {
+						$("#up_nav_link").fadeIn(400, function() {
+							$(this).unbind('scroll');
+						});
+					}
+				});
+				
+				
+				// portfolio image galleries
+				function formatTitle(title, currentArray, currentIndex, currentOpts) {
+				    return '<div id="tip7-title"><span><a href="javascript:;" onclick="$.fancybox.close();"><img src="images/closelabel.gif" /></a></span>' + (title && title.length ? '<b>' + title + '</b>' : '' ) + 'Image ' + (currentIndex + 1) + ' of ' + currentArray.length + '</div>';
+				};
+				
+				$("a#cc-answer-detail, a#cc-guide-app, a#hamming").fancybox({
+					'transitionIn'	:	'elastic',
+					'transitionOut'	:	'elastic',
+					'speedIn'		:	600, 
+					'speedOut'		:	200,
+					'titlePosition' :   'inside',
+					'titleFormat'  	: 	formatTitle,
+					'cyclic'		:   true, 
+					'autoScale'		: 	true,
+					'autoDimensions': 	true
+				});
+				
+				
+				// hijack the default submit
+				$("#contact_form").submit(function(e) {
+					
+					// validate the data
+					var isValid = true;
+					var name = $("#name").val();
+					var email = $("#email").val();
+					var message = $("#message").val();
+					
+					if(name == '' || name == 'name'){
+						$("#name").parent().css({"border": "2px solid red"});
+						isValid = false;
+					} else {
+						$("#name").parent().css({"border": "none"});
+					}
+					
+					if(message == '' || message == 'message'){
+						$("#message").parent().css({"border": "2px solid red"});
+						isValid = false;
+					} else {
+						$("#message").parent().css({"border": "none"});
+					}
+					
+					if(email == '' || email == 'email'){
+						$("#email").parent().css({"border": "2px solid red"});
+						isValid = false;
+					} else if(!(/^[a-zA-Z0-9_\.\-]+\@([a-zA-Z0-9\-]+\.)+[a-zA-Z0-9]{2,4}$/.test(email))) {
+						$("#email").parent().css({"border": "2px solid red"});
+						isValid = false;
+					} else {
+						$("#email").parent().css({"border": "none"});
+					}
+					
+					
+					if(!isValid) {return false;}
+					
+					var data = {};
+					$(this).find("input, textarea").each(function() {
+						data[this.id] = this.value;
+					});
+					
+					$.ajax({
+						url: 'contact.php',
+						data: (data),
+						dataType: 'json',
+						type: 'POST',
+						success: function(resp) {
+							if(resp.success == true) {
+								$("#confirm_msg").text("your message was sent!").css({"visibility":"visible", "color" : "#068600"});
+							} else {
+								$("#confirm_msg").text("oops, something bad happened, try again.").css({"visibility":"visible", "color" : "red"});
+							}
+						},
+						error: function(resp) {
+							$("#confirm_msg").text("oops, something bad happened, try again.").css({"visibility":"visible", "color" : "red"});
+						}
+					})
+					
+					e.preventDefault();
+					return false;
+				});
+				
+			});
+		</script>
 	</body>
 </html>

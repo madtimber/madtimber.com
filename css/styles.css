@@ -32,7 +32,7 @@ body, textarea {
 }
 
 body {
-	background: #CF7126 url('../images/wood_bg.jpg') top center fixed;
+	background: #ebdfca url('../images/wood_bg.jpg') top center fixed;
 	color: white;
 	margin: 0;
 	padding: 0;
@@ -118,9 +118,12 @@ body {
 }
 
 #up_nav_link {
-	display: block;
+	display: none;
 	margin-top: 60px;
+	background-color: #78478C !important;
+	border-color: #9e7bab !important;
 }
+
 /****** END NAV STYLES ******/
 
 
@@ -186,6 +189,10 @@ body {
 	font-weight: bold;
 	padding-left: 50px;
 	padding-right: 40px;
+}
+
+.last_intro {
+	padding-top: 6px;
 }
 
 #salutation {
@@ -280,6 +287,14 @@ span.ashamed {
 	line-height: 23px;
 }
 
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('type/myriadpro-it-webfont.eot');
+	src: local('☺'), url('type/myriadpro-it-webfont.woff') format('woff'), url('type/myriadpro-it-webfont.ttf') format('truetype'), url('type/myriadpro-it-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
 #ux_section .description_section h1 {
 	background: url('../images/person.png') no-repeat top left;
 }
@@ -300,6 +315,10 @@ span.ashamed {
 }
 
 /**** MY WORK ****/
+
+.hidden {
+	display: none;
+}
 
 #wrk {
 	color: #EFE2D7;
@@ -414,7 +433,7 @@ span.ashamed {
 #social_networks {
 	padding-left: 40px;
 	width: 300px;
-	margin-top: -5px;
+	margin-top: 3px;
 }
 
 #social_networks p {
@@ -507,7 +526,7 @@ span.ashamed {
 
 #btn_submit_cf {
 	float: right;
-	margin: 15px 348px 0 0;
+	margin: 15px 33px 0 0;
 	background: url('../images/submit_btn.png') no-repeat top left;
 	border: 0;
 	width: 83px;
@@ -521,6 +540,15 @@ span.ashamed {
 	display: block;
 	padding-bottom: 4px;
 	color: #24221E;
+}
+
+#confirm_msg {
+	float: right;
+	display: block;
+	width: 285px;
+	margin: 18px 28px 0 0;
+	color: #068600;
+	visibility: hidden;
 }
 
 /**** END CONTENT STYLES ****/
@@ -544,12 +572,4 @@ span.ashamed {
 	src: local('☺'), url('type/myriadpro-bold-webfont.woff') format('woff'), url('type/myriadpro-bold-webfont.ttf') format('truetype'), url('type/myriadpro-bold-webfont.svg#webfont') format('svg');
 	font-weight: bold;
 	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Myriad Pro';
-	src: url('type/myriadpro-it-webfont.eot');
-	src: local('☺'), url('type/myriadpro-it-webfont.woff') format('woff'), url('type/myriadpro-it-webfont.ttf') format('truetype'), url('type/myriadpro-it-webfont.svg#webfont') format('svg');
-	font-weight: normal;
-	font-style: italic;
 }
