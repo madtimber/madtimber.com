@@ -1,6 +1,12 @@
 <?php
 require_once ('Mail.php');
 
+if(!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['message'])) {
+	header('HTTP/1.1 403 Forbidden');
+	header('Location: http://www.madtimber.com') ;
+	exit;
+}
+
 $json;
 $name = $_POST['name'];
 $from = $_POST['email'];
