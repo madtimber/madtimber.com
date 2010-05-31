@@ -117,11 +117,21 @@ body {
 	text-decoration: none;
 }
 
+#nav a:hover {
+	background-color: #13740d;
+	border-left: 10px solid #3A8F35;
+}
+
 #up_nav_link {
 	display: none;
 	margin-top: 60px;
 	background-color: #78478C !important;
 	border-color: #9e7bab !important;
+}
+
+#nav a#up_nav_link:hover {
+	background-color: #673679 !important;
+	border-color: #9364a5 !important;
 }
 
 /****** END NAV STYLES ******/
