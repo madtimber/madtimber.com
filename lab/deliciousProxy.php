@@ -1,6 +1,6 @@
 <?php 
-	$username = '';
-	$password = '';
+	$username = 'madtimber';
+	$password = 'ewallin';
 	$DELICIOUS_API_URL = "https://$username:$password@api.del.icio.us/v1/posts/get?url=";
 	
 	$url = $DELICIOUS_API_URL . urlencode($_GET['url']);
