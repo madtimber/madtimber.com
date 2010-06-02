@@ -1,0 +1,97 @@
+
+/* reset */
+body, h1, p, input {
+	padding: 0;
+	margin: 0;
+	}
+
+body {
+	padding: 20px 0;
+	background-color: #eee;
+	font-family: Arial;
+	}
+
+h1 {
+	color: #444;
+	margin-bottom: 4px;
+	}
+
+#urlInput {
+	width: 300px;
+	}
+
+#inputHelp {
+	font-size: .7em;
+	color: #777;
+	margin: 2px 0 0 2px;
+	}
+
+#mainWrap {
+	padding: 0 20px;
+	margin: 0 auto;
+	width: 969px;
+	}
+	
+#urlEntrySection {
+	margin: 20px auto;
+	}
+
+#qurlSection, 
+#deliciousSection,
+#urlEntrySection {
+	border: 1px solid #ccc;
+	padding: 10px;
+	width: 452px;
+	-moz-border-radius: 15px;
+	}
+	
+#qurlSection, 
+#deliciousSection {
+	float: left;
+	}
+
+#qurlSection {
+	margin-right: 20px;
+	}
+
+#qurlResultSection,
+#deliciousResultSection {
+	display: none;
+	background-color: #ddd;
+	padding: 10px;
+	margin-top: 5px;
+	-moz-border-radius: 7px;
+	text-align: center;
+	}
+
+#qurlResultSection p,
+#deliciousResultSection p {
+	font-size: .9em;
+	margin-bottom: 5px;
+	text-align: left;
+	}
+
+#qurlResultSection a {
+	outline: none;
+	}
+
+#urlInputError, 
+#qurlRequestError,
+#deliciousRequestError {
+	color: red;
+	font-size: .8em;
+	margin-left: 2px;
+	}
+	
+.attribValue {
+	text-align: left;
+	}
+	
+.attribName, .attribValue {
+	font-size: 12px;
+	}
+	
+.attribName {
+	text-align: right;
+	padding-right: 15px;
+	}

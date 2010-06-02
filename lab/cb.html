@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Compedium Take Home Project</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="description" content="This is the Compedium Blogware take home project." />	
+		<link href="cb.css" rel="stylesheet" type="text/css" media="screen" />
+		<script src="cb.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="mainWrap">
+			<div id="urlEntrySection">
+				<h1>Enter a URL</h1>
+				<input id="urlInput" type="text" />
+				<input id="sendUrlBtn" type="button" value="Get URL Info" />
+				<p id="inputHelp"><i>example: http://www.areallylongurl.com/i_mean_really_long</i></p>
+				<span id="urlInputError"></span>
+			</div>
+			<div id="qurlSection">
+				<h1>Qurl</h1>
+				<div id="qurlResultSection">
+					<p>Your shortened Qurl URL is:</p>
+					<span id="qurlRequestError"></span>
+					<a id="qurlResult" href="#" target="_blank"></a>
+				</div>
+			</div>
+			<div id="deliciousSection">	
+				<h1>Del.icio.us</h1>
+				<div id="deliciousResultSection">
+					<p>Your Del.icio.us lookup returned:</p>
+					<span id="deliciousRequestError"></span>
+					<div id="deliciousResult"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
