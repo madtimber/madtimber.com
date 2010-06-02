@@ -17,7 +17,11 @@ h1 {
 	}
 
 #urlInput {
-	width: 300px;
+	font-size:14px;
+	height:21px;
+	margin-right:2px;
+	padding:4px;
+	width:593px;
 	}
 
 #inputHelp {
@@ -32,18 +36,85 @@ h1 {
 	width: 969px;
 	}
 	
+#note_section {
+	background-color: #DDDDDD;
+	margin: 0 auto;
+	padding: 15px;
+	width: 693px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+}
+
+#note_section ul {
+	margin: 0;
+	padding-left: 20px;
+}
+
+#note_section ul,
+#note_section p {
+	color: #888;
+}
+
+#note_section h2 {
+	padding: 0;
+	margin: 0;
+	color: #555;
+}
+
+#note_section p {
+	padding: 0;
+	margin: 5px 5px;
+}
+	
 #urlEntrySection {
 	margin: 20px auto;
 	}
+	
+#sendUrlBtn, #sendUrlBtn:focus {
+	background-color: #4074CF;
+	border: 1px solid #3662AF;
+	height: 34px;
+	width: 87px;
+	cursor: pointer;
+	color: white;
+	-moz-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.5);
+	box-shadow:1px 1px 3px rgba(0, 0, 0, 0.5);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	outline: none;
+	}
+	
+#sendUrlBtn:hover {
+	background-color: #5386DF;
+}
+
+#sendUrlBtn:active {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
 
 #qurlSection, 
 #deliciousSection,
 #urlEntrySection {
 	border: 1px solid #ccc;
 	padding: 10px;
-	width: 452px;
 	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
 	}
+	
+#qurlSection, 
+#deliciousSection {
+	width: 452px;
+}
+	
+#urlEntrySection {
+	width: 702px;
+}
 	
 #qurlSection, 
 #deliciousSection {
@@ -61,6 +132,8 @@ h1 {
 	padding: 10px;
 	margin-top: 5px;
 	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
 	text-align: center;
 	}
 
