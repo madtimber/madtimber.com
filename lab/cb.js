@@ -28,6 +28,12 @@ TB.util = (function() {
 		
 		getEventTarget: function(e) {
 			return (e.target || e.srcElement);
+		},
+		
+		catchEnterAndSend: function(e) {
+			if(e.keyCode == "13") {
+				UrlApp.validateURLandSend(e);
+			}
 		}
 	}
 	
@@ -211,6 +217,8 @@ var UrlApp = (function() {
 	
 })();
 
+// attach an 'onload' event handler to the window's load event
 TB.util.attachEventHandler(window, 'load', function() {
 	TB.util.attachEventHandler(TB.util.$('sendUrlBtn'), 'click', function(e) {UrlApp.validateURLandSend(e)});
+	TB.util.attachEventHandler(TB.util.$('urlInput'), 'keypress', function(e) {TB.util.catchEnterAndSend(e)});
 });
