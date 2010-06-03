@@ -141,6 +141,12 @@ h1 {
 	border-radius: 7px;
 	text-align: center;
 	}
+	
+span.loading {
+	display: none;
+	background: url('ajax-loader-bars-large.gif') 50% 50% no-repeat;
+	height: 43px;
+}
 
 #qurlResultSection p,
 #deliciousResultSection p {

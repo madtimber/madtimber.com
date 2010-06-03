@@ -112,6 +112,7 @@ var UrlApp = (function() {
 	
 	function qurlSucc(responseText) {
 		TB.util.$('qurlRequestError').innerHTML = '';
+		TB.util.$('qurlLoad').style.display = "none";
 		
 		var link = TB.util.$('qurlResult');
 		link.innerHTML = responseText;
@@ -122,6 +123,7 @@ var UrlApp = (function() {
 	
 	function qurlFail(responseStatus) {
 		TB.util.$('qurlResult').innerHTML = '';
+		TB.util.$('qurlLoad').style.display = "none";
 		TB.util.$('qurlRequestError').innerHTML = 'An error occurred during your request.';
 		TB.util.$('qurlResultSection').style.display = 'block';
 	}
@@ -131,6 +133,7 @@ var UrlApp = (function() {
 		var dr = TB.util.$('deliciousResult');
 		dr.innerHTML = '';
 		TB.util.$('deliciousRequestError').innerHTML = '';
+		TB.util.$('delLoad').style.display = "none";
 		
 		var table = document.createElement('table');
 		var tbody = document.createElement('tbody');  // because IE 6 & 7 are awesome
@@ -173,6 +176,7 @@ var UrlApp = (function() {
 		var dr = TB.util.$('deliciousResult');
 		dr.innerHTML = '';
 		dr.style.display = 'none';
+		TB.util.$('delLoad').style.display = "none";
 		TB.util.$('deliciousRequestError').innerHTML = 'An error occurred during your request.';
 		TB.util.$('deliciousResultSection').style.display = 'block';
 	}
@@ -188,12 +192,19 @@ var UrlApp = (function() {
 			var url = TB.util.$('urlInput').value;
 			// validate the url
 			if (TB.util.isValidURL(url)) {
+				
+				var delEl = TB.util.$('deliciousResultSection');
+				var qurlEl = TB.util.$('qurlResultSection');
+				
 				// reset(hide) Qurl result sections
-				TB.util.$('qurlResultSection').style.display = 'none';
+				qurlEl.style.display = 'none';
 	
 				// reset(hide) Delicious result section
-				TB.util.$('deliciousResultSection').style.display = 'none';
+				delEl.style.display = 'none';
 
+				// set the laoding gif
+				TB.util.$('qurlLoad').style.display = "block";
+				TB.util.$('delLoad').style.display = "block";
 				
 				// disable the button
 				// (delicious wants you to send no more than one request a second)
