@@ -24,22 +24,18 @@
 		</div>
 		<script>
 			
-			document.getElementById("play").addEventListener('click', function(e) {
-				var player = document.getElementById("audio1");
-				if (player.paused) {
-					player.play();
-				} else {
-					player.pause();
-				}
-
+			document.getElementById("play").addEventListener('click', function(e) {	
+				newPlayer.playPause();		
 			}, false);
 			
 			document.getElementById("restart").addEventListener('click', function(e) {
-				var player = document.getElementById("audio1");
-				player.currentTime = 0;
-				setTimer(0);
+			//	var player = document.getElementById("audio1");
+			//	player.currentTime = 0;
+			//	setTimer(0);
+			
+				newPlayer.restart();
 				
-				setProgressIndicator(player.currentTime, player.duration);
+			//	setProgressIndicator(player.currentTime, player.duration);
 
 			}, false);
 			
@@ -57,40 +53,110 @@
 				
 			}, false);
 			
-			function setProgressIndicator(currentTime, duration) {
-				var holder = document.getElementById("prog-indicator");
-				var holderWidth = holder.clientWidth;
-				var percent = (duration == 0) ? 0 : (currentTime/duration);
+	//		function setProgressIndicator(currentTime, duration) {
+	//			var holder = document.getElementById("prog-indicator");
+	//			var holderWidth = holder.clientWidth;
+	//			var percent = (duration == 0) ? 0 : (currentTime/duration);
 				
-				var indicator = document.getElementById("indicator");
-				var percent_el = document.getElementById("percent");
+	//			var indicator = document.getElementById("indicator");
+	//			var percent_el = document.getElementById("percent");
 				
-				indicator.style.width = Math.floor(holderWidth*percent)+"px";
-				percent_el.innerText = Math.round(percent*100)+"%";
-			}
+		//		indicator.style.width = Math.floor(holderWidth*percent)+"px";
+		//		percent_el.innerText = Math.round(percent*100)+"%";
+		//	}
 			
-			function setTimer(sec) {
-				var timer = document.getElementById("timer");
-				var currentTime = secondsToTime(Math.round(sec));
-				timer.innerText = currentTime.m + ":" + currentTime.s;
-			}
+		//	function setTimer(sec) {
+		//		var timer = document.getElementById("timer");
+		//		var currentTime = secondsToTime(Math.round(sec));
+		//		timer.innerText = currentTime.m + ":" + currentTime.s;
+		//	}
 			
-			function secondsToTime(n) {
-				var minutes = Math.floor(n / 60);
-				var secs = n % 60;
+			function HTML5Player(id) {
 				
-				if (secs < 10) {
-					secs = "0"+secs;
+				var currTime;
+				var timer = null;
+				var progIndicatorHolderEl = null;
+				var progIndicatorEl = null;
+				var percentEl = null;
+				var timerEl = null;
+				var player;
+				var duration;
+				
+				function secondsToTime(n) {
+					var minutes = Math.floor(n / 60);
+					var secs = n % 60;
+
+					if (secs < 10) {
+						secs = "0"+secs;
+					}
+
+					var obj = {
+						"m" : minutes,
+						"s" : secs
+					};
+
+					return obj;
 				}
 				
+				function setProgressIndicator() {
+					var holderWidth = progIndicatorHolder.clientWidth;
+					var percent = (player.duration == 0) ? 0 : (player.currentTime/player.duration);
+
+					progIndicator.style.width = Math.floor(holderWidth*percent)+"px";
+					percentEl.innerText = Math.round(percent*100)+"%";
+				}
 				
-				var obj = {
-					"m" : minutes,
-					"s" : secs
+				return {
+					init: function(id) {
+						player = document.getElementById(id);
+						duration = player.duration;
+					},
+					playPause: function() {
+						if(player.paused) {
+							player.play();
+						} else {
+							player.pause();
+						}
+					},
+					restart:  function() {
+						player.currentTime = 0;
+						
+						if(progIndicator) {
+							setProgressIndicator();
+						}
+					},
+					initTimer: function(id) {
+						timerEl = document.getElementById(id);
+					},
+					setTimer:  function(sec) {
+						var currentTime = secondsToTime(Math.round(sec));
+						timerEl.innerText = currentTime.m + ":" + currentTime.s;
+					},
+					initProgIndicator: function(indicatorHolderID, indicatorID, percentID) {
+						progIndicatorHolder = document.getElementById(indicatorHolderID);
+						progIndicator = document.getElementById(indicatorID);
+						percentEl = document.getElementById(percentID);
+					},
+					onTimeUpdate: function(func) {
+						player.addEventListener('timeupdate', function(e) {
+							func.call(this, e);
+						}, false);
+					}
 				};
-				
-				return obj;
 			}
+			
+			var newPlayer = HTML5Player();
+			newPlayer.init("audio1");
+			newPlayer.initProgIndicator("prog-indicator", "indicator", "percent");
+			newPlayer.initTimer("timer");
+			newPlayer.onTimeUpdate(function(e) {
+				this.setTimer(this.currentTime);		
+				
+				var duration = document.getElementById("duration");
+				var d= secondsToTime(Math.round(this.duration));
+				duration.innerText = d.m + ":" + d.s;
+			})
+			
 		</script>
 	</body>
 </html>
