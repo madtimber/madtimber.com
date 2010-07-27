@@ -14,7 +14,8 @@
 		</audio>
 		
 		<div id="da1">
-			<span>press to play/pause song</span>
+			<span id="play">play/pause</span>
+			<span id="restart">restart</span>
 		</div>
 		
 		<div id="time_info">
@@ -23,7 +24,7 @@
 		</div>
 		<script>
 			
-			document.getElementById("da1").addEventListener('click', function(e) {
+			document.getElementById("play").addEventListener('click', function(e) {
 				var player = document.getElementById("audio1");
 				if (player.paused) {
 					player.play();
@@ -33,11 +34,18 @@
 
 			}, false);
 			
+			document.getElementById("restart").addEventListener('click', function(e) {
+				var player = document.getElementById("audio1");
+				player.currentTime = 0;
+				setTimer(0);
+				
+				setProgressIndicator(player.currentTime, player.duration);
+
+			}, false);
+			
 			document.getElementById("audio1").addEventListener('timeupdate', function(e) {
 				// set current timer element
-				var timer = document.getElementById("timer");
-				var currentTime = secondsToTime(Math.round(this.currentTime));
-				timer.innerText = currentTime.m + ":" + currentTime.s;
+				setTimer(this.currentTime);
 				
 				// set the duration element
 				var duration = document.getElementById("duration");
@@ -59,6 +67,12 @@
 				
 				indicator.style.width = Math.floor(holderWidth*percent)+"px";
 				percent_el.innerText = Math.round(percent*100)+"%";
+			}
+			
+			function setTimer(sec) {
+				var timer = document.getElementById("timer");
+				var currentTime = secondsToTime(Math.round(sec));
+				timer.innerText = currentTime.m + ":" + currentTime.s;
 			}
 			
 			function secondsToTime(n) {

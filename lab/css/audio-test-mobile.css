@@ -2,11 +2,6 @@ body {
 	font-family: helvetica, arial, tahoma;
 }
 
-audio {
-	width: 800px;
-	margin: 0 auto 60px;
-}
-
 h1 {
 	font-size: 60px;
 	text-align: center;
@@ -14,20 +9,23 @@ h1 {
 
 #da1 {
 	width: 800px;
-	height: 90px;
-	border: 1px solid #888;
-	margin-bottom: 40px;
-	color: #555;
-	margin: 0 auto 40px;
-	-webkit-border-radius: 30px;
-	border-radius: 30px;
-	background-color: #ccc;
+	margin: 0 auto 80px;
+	border: none;
 }
 
 #da1 span {
-	display: block;
-	padding: 20px 0px 20px 170px;
+	display: inline-block;
+	width: 200px;
+	height: 60px;
+	border: 1px solid #888;
 	font-size: 40px;
+	color: #555;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	background-color: #ccc;
+	text-align: center;
+	padding-top: 20px;
+	margin-left: 55px;
 }
 
 #time_info {
