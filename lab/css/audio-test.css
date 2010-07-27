@@ -1,0 +1,36 @@
+body {
+	font-family: helvetica, arial, tahoma;
+}
+
+#da1 {
+	width: 300px;
+	height: 40px;
+	border: 1px solid #aaa;
+	margin-bottom: 40px;
+	font-align: center;
+	color: #555;
+}
+
+#da1 span {
+	display:block;
+	padding:12px 56px;
+}
+
+#time_info {
+	color: #555;
+}
+
+#prog-indicator { 
+	width: 300px;
+	border: 1px solid #ccc;	
+}
+
+#prog-indicator, #indicator {
+	height: 5px;
+}
+
+#indicator {
+	width: 0px;
+	background-color: green;
+	display: block;
+}
