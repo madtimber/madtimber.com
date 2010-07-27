@@ -4,11 +4,41 @@
 		<meta charset="utf-8"/>
 		<title>HTML5 &lt;audio&gt; test.</title>
 		<style>
+		
+			body {
+				font-family: helvetica, arial, tahoma;
+			}
 			
 			#da1 {
 				width: 300px;
 				height: 40px;
-				border: 1px solid black;
+				border: 1px solid #aaa;
+				margin-bottom: 40px;
+				font-align: center;
+				color: #555;
+			}
+			
+			#da1 span {
+				display:block;
+				padding:12px 56px;
+			}
+			
+			#time_info {
+				color: #555;
+			}
+			
+			#prog-indicator { 
+				width: 300px;
+				border: 1px solid #ccc;	
+			}
+			
+			#prog-indicator, #indicator {
+				height: 5px;
+			}
+			
+			#indicator {
+				width: 0px;
+				background-color: green;
 				display: block;
 			}
 
@@ -18,17 +48,70 @@
 	</head>
 	<body>
 		<h1>Audio Tag Test</h1>
-		<audio id="audio1">
-			<source src="../music/test.mp3" />
+		<audio id="audio1" controls="true">
+			<source src="../music/test.mp3" type="audio/mp3" />
 		</audio>
 		
 		<div id="da1">
-			<h4> click me for a song</h4>
+			<span>press to play/pause song</span>
+		</div>
+		
+		<div id="time_info">
+			<span>Timer: <span id="timer">0:00</span> of <span id="duration"></span> (<span id="percent"></span>)</span>
+			<div id="prog-indicator"><span id="indicator"></span></div>
 		</div>
 		<script>
+			
 			document.getElementById("da1").addEventListener('click', function(e) {
-				document.getElementById("audio1").play();
+				var player = document.getElementById("audio1");
+				var timer = document.getElementById("duration");
+				if (player.paused) {
+					player.play();
+				} else {
+					player.pause();
+				}
+				var duration = secondsToTime(Math.round(player.duration));
+				timer.innerText = duration.m + ":" + duration.s;
 			}, false);
+			
+			document.getElementById("audio1").addEventListener('timeupdate', function(e) {
+				var timer = document.getElementById("timer");
+				var currentTime = secondsToTime(Math.round(this.currentTime));
+				timer.innerText = currentTime.m + ":" + currentTime.s;
+				
+				// update the progress indicator
+				setProgressIndicator(this.currentTime, Math.round(this.duration));
+				
+			}, false);
+			
+			function setProgressIndicator(currentTime, duration) {
+				var holder = document.getElementById("prog-indicator");
+				var holderWidth = holder.clientWidth;
+				var percent = (duration == 0) ? 0 : (currentTime/duration);
+				
+				var indicator = document.getElementById("indicator");
+				var percent_el = document.getElementById("percent");
+				
+				indicator.style.width = Math.floor(holderWidth*percent)+"px";
+				percent_el.innerText = Math.round(percent*100)+"%";
+			}
+			
+			function secondsToTime(n) {
+				var minutes = Math.floor(n / 60);
+				var secs = n % 60;
+				
+				if (secs < 10) {
+					secs = "0"+secs;
+				}
+				
+				
+				var obj = {
+					"m" : minutes,
+					"s" : secs
+				};
+				
+				return obj;
+			}
 		</script>
 	</body>
 </html>
