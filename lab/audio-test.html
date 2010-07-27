@@ -64,20 +64,24 @@
 			
 			document.getElementById("da1").addEventListener('click', function(e) {
 				var player = document.getElementById("audio1");
-				var timer = document.getElementById("duration");
 				if (player.paused) {
 					player.play();
 				} else {
 					player.pause();
 				}
-				var duration = secondsToTime(Math.round(player.duration));
-				timer.innerText = duration.m + ":" + duration.s;
+
 			}, false);
 			
 			document.getElementById("audio1").addEventListener('timeupdate', function(e) {
+				// set current timer element
 				var timer = document.getElementById("timer");
 				var currentTime = secondsToTime(Math.round(this.currentTime));
 				timer.innerText = currentTime.m + ":" + currentTime.s;
+				
+				// set the duration element
+				var duration = document.getElementById("duration");
+				var d= secondsToTime(Math.round(this.duration));
+				duration.innerText = d.m + ":" + d.s;
 				
 				// update the progress indicator
 				setProgressIndicator(this.currentTime, Math.round(this.duration));
