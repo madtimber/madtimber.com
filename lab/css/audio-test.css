@@ -1,5 +1,11 @@
 body {
 	font-family: helvetica, arial, tahoma;
+	background-color: #ddd;
+	color: #333;
+}
+
+audio {
+	display: none;
 }
 
 #da1 {
@@ -7,8 +13,7 @@ body {
 	height: 40px;
 	border: 1px solid #aaa;
 	margin-bottom: 40px;
-	font-align: center;
-	color: #555;
+	color: #777;
 }
 
 #da1 span {

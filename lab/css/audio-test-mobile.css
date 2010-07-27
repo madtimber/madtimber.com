@@ -2,33 +2,44 @@ body {
 	font-family: helvetica, arial, tahoma;
 }
 
+audio {
+	width: 800px;
+	margin: 0 auto 60px;
+}
+
 h1 {
 	font-size: 60px;
+	text-align: center;
 }
 
 #da1 {
 	width: 800px;
 	height: 90px;
-	border: 1px solid #aaa;
+	border: 1px solid #888;
 	margin-bottom: 40px;
-	font-align: center;
 	color: #555;
+	margin: 0 auto 40px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	background-color: #ccc;
 }
 
 #da1 span {
-	display:block;
-	padding:12px 56px;
+	display: block;
+	padding: 20px 0px 20px 170px;
 	font-size: 40px;
 }
 
 #time_info {
 	color: #555;
 	font-size: 42px;
+	margin: 0 auto;
+	width: 800px;
 }
 
 #prog-indicator { 
 	width: 800px;
-	border: 1px solid #ccc;	
+	border: 1px solid #999;	
 }
 
 #prog-indicator, #indicator {
