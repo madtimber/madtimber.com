@@ -8,13 +8,14 @@
 		<link rel="stylesheet" type="text/css" href="css/audio-test-mobile.css" media="only screen and (max-device-width: 480px)" />
 	</head>
 	<body>
-		<h1>HTML5 &lt;audio&gt; test</h1>
+		<h1 >HTML5 &lt;audio&gt; test</h1>
 		<audio id="audio1">
 			<source src="../music/test.mp3" type="audio/mp3" />
+			<source src="../music/test.ogg" type="audio/ogg" />
 		</audio>
 		
 		<div id="da1">
-			<span id="play">play/pause</span>
+			<span id="play">play / pause</span>
 			<span id="restart">restart</span>
 		</div>
 		
@@ -28,59 +29,37 @@
 				newPlayer.playPause();		
 			}, false);
 			
-			document.getElementById("restart").addEventListener('click', function(e) {
-			//	var player = document.getElementById("audio1");
-			//	player.currentTime = 0;
-			//	setTimer(0);
-			
+			document.getElementById("restart").addEventListener('click', function(e) {		
 				newPlayer.restart();
-				
-			//	setProgressIndicator(player.currentTime, player.duration);
+			}, false);
 
-			}, false);
 			
-			document.getElementById("audio1").addEventListener('timeupdate', function(e) {
-				// set current timer element
-				setTimer(this.currentTime);
+			function HTML5Player(obj) {
 				
-				// set the duration element
-				var duration = document.getElementById("duration");
-				var d= secondsToTime(Math.round(this.duration));
-				duration.innerText = d.m + ":" + d.s;
-				
-				// update the progress indicator
-				setProgressIndicator(this.currentTime, Math.round(this.duration));
-				
-			}, false);
-			
-	//		function setProgressIndicator(currentTime, duration) {
-	//			var holder = document.getElementById("prog-indicator");
-	//			var holderWidth = holder.clientWidth;
-	//			var percent = (duration == 0) ? 0 : (currentTime/duration);
-				
-	//			var indicator = document.getElementById("indicator");
-	//			var percent_el = document.getElementById("percent");
-				
-		//		indicator.style.width = Math.floor(holderWidth*percent)+"px";
-		//		percent_el.innerText = Math.round(percent*100)+"%";
-		//	}
-			
-		//	function setTimer(sec) {
-		//		var timer = document.getElementById("timer");
-		//		var currentTime = secondsToTime(Math.round(sec));
-		//		timer.innerText = currentTime.m + ":" + currentTime.s;
-		//	}
-			
-			function HTML5Player(id) {
-				
-				var currTime;
+				var currentTime;
+				var duration;
+				var durationEl = null;
 				var timer = null;
 				var progIndicatorHolderEl = null;
 				var progIndicatorEl = null;
 				var percentEl = null;
 				var timerEl = null;
 				var player;
-				var duration;
+				
+				if(obj && typeof(obj) === 'object') {
+					
+					// TODO: add some armor for required items not passed in
+					player = document.getElementById(obj['player_id']);
+					timerEl = document.getElementById(obj['timer_el_id']);
+					durationEl = document.getElementById(obj['duration_el_id']);
+					progIndicatorHolder = document.getElementById(obj['prog_indicator_holder_id']);
+					progIndicator = document.getElementById(obj['indicator_id']);
+					percentEl = document.getElementById(obj['percent_el_id']);
+					setProgressIndicator();
+				} else {
+					console.log("PLayer was not initialized properly.");
+				}
+				
 				
 				function secondsToTime(n) {
 					var minutes = Math.floor(n / 60);
@@ -103,14 +82,10 @@
 					var percent = (player.duration == 0) ? 0 : (player.currentTime/player.duration);
 
 					progIndicator.style.width = Math.floor(holderWidth*percent)+"px";
-					percentEl.innerText = Math.round(percent*100)+"%";
+					percentEl.innerHTML = Math.round(percent*100)+"%";
 				}
 				
 				return {
-					init: function(id) {
-						player = document.getElementById(id);
-						duration = player.duration;
-					},
 					playPause: function() {
 						if(player.paused) {
 							player.play();
@@ -125,36 +100,41 @@
 							setProgressIndicator();
 						}
 					},
-					initTimer: function(id) {
-						timerEl = document.getElementById(id);
-					},
 					setTimer:  function(sec) {
 						var currentTime = secondsToTime(Math.round(sec));
-						timerEl.innerText = currentTime.m + ":" + currentTime.s;
+						timerEl.innerHTML = currentTime.m + ":" + currentTime.s;
 					},
-					initProgIndicator: function(indicatorHolderID, indicatorID, percentID) {
-						progIndicatorHolder = document.getElementById(indicatorHolderID);
-						progIndicator = document.getElementById(indicatorID);
-						percentEl = document.getElementById(percentID);
+					setDuration: function() {
+						var dsec = secondsToTime(Math.round(this.duration));
+						durationEl.innerHTML = dsec.m + ":" + dsec.s;
 					},
 					onTimeUpdate: function(func) {
+						var that = this;
+						
+						// TODO: fix for IE later
 						player.addEventListener('timeupdate', function(e) {
-							func.call(this, e);
+							that.duration = this.duration;
+							that.currentTime = this.currentTime;
+							setProgressIndicator(); 		
+							func.call(that, e);
 						}, false);
 					}
 				};
 			}
 			
-			var newPlayer = HTML5Player();
-			newPlayer.init("audio1");
-			newPlayer.initProgIndicator("prog-indicator", "indicator", "percent");
-			newPlayer.initTimer("timer");
+			var newPlayer = HTML5Player({
+				player_id: "audio1",
+				timer_el_id: "timer",
+				duration_el_id: "duration",
+				prog_indicator_holder_id: "prog-indicator",
+				indicator_id: "indicator",
+				percent_el_id: "percent"
+			});
 			newPlayer.onTimeUpdate(function(e) {
-				this.setTimer(this.currentTime);		
 				
-				var duration = document.getElementById("duration");
-				var d= secondsToTime(Math.round(this.duration));
-				duration.innerText = d.m + ":" + d.s;
+				// this stuff really seems like it should be abstracted away
+				this.setTimer(this.currentTime);						
+				this.setDuration();
 			})
 			
 		</script>

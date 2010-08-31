@@ -1,6 +1,6 @@
 
 var TB = (window.TB || {});
-// singleton
+
 TB.util = (function() {
 	
 	return {
@@ -40,7 +40,6 @@ TB.util = (function() {
 })();
 
 
-// singleton
 var AJAX = (function() {
 	
 	// factory for XHR object
@@ -83,7 +82,7 @@ var AJAX = (function() {
 })();
 
 var API = (window.API || {});
-// singleton
+
 API.qurl = (function() {
 	
 	var QURL_PROXY_URL = 'qurlProxy.php?url=';
@@ -95,7 +94,6 @@ API.qurl = (function() {
 	
 })();
 
-// singleton
 API.delicious = (function() {
 	
 	var DELICIOUS_PROXY_URL = 'deliciousProxy.php?url=';
@@ -107,7 +105,6 @@ API.delicious = (function() {
 	
 })();
 
-// singleton
 var UrlApp = (function() {
 	
 	function qurlSucc(responseText) {

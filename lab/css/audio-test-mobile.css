@@ -15,17 +15,17 @@ h1 {
 
 #da1 span {
 	display: inline-block;
-	width: 200px;
+	width: 220px;
 	height: 60px;
 	border: 1px solid #888;
 	font-size: 40px;
 	color: #555;
 	-webkit-border-radius: 30px;
 	border-radius: 30px;
-	background-color: #ccc;
+
 	text-align: center;
 	padding-top: 20px;
-	margin-left: 55px;
+	margin-left: 75px;
 }
 
 #time_info {
