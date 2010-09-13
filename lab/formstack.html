@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<style>
 		
-		body, section, ul, h1, h2, h3, li {
+		body, div, ul, h1, h2, h3, li {
 			padding: 0px;
 			margin: 0px;
 		}
@@ -26,7 +26,7 @@
 			margin: 0px auto;
 		}
 		
-		header {
+		#header {
 			background-color: #ddd;
 			margin: 20px auto;
 			padding: 15px;
@@ -36,23 +36,23 @@
 			border-radius: 10px 10px 10px 10px;
 		}
 		
-		header ul,
-		header p {
+		#header ul,
+		#header p {
 			color: #888;
 		}
 
-		header h2 {
+		#header h2 {
 			padding: 0;
 			margin: 0;
 			color: #555;
 		}
 
-		header p {
+		#header p {
 			padding: 0;
 			margin: 5px 5px;
 		}
 		
-		header ul li {
+		#header ul li {
 			margin: 0 0 0 20px;
 		}
 		
@@ -78,7 +78,7 @@
 			font-family: tahoma;
 		}
 		
-		#chart_wrap aside {
+		#chart_wrap div {
 			clear: both;
 			margin: 250px 0 0 20px;
 			font-size: 16px;
@@ -94,9 +94,22 @@
 		
 		#chart_legend {
 			float: right;
-			font-size: 30px;
+			font-size: 20px;
 			font-weight: bold;
-			margin: 20px 40px 0 0;
+			margin: 90px 20px 0 0;
+		}
+		
+		#chart_legend span {
+			font-size: 18px;
+		}
+		
+		#num_guests {
+			font-size: 28px;
+			color: #777;
+		}
+		
+		#yes_legend, #no_legend {
+			width: 80px;
 		}
 		
 		#yes_legend {
@@ -107,16 +120,17 @@
 			color: #9F5959;
 		}
 		
-		footer {
-			clear: both;
+		form#fsForm999417 table#fsSection9895861 {
+			width: 300px !important;
 		}
+		
 		
 		</style>
 	</head>
 
 	<body>
-		<section id="wrap">
-			<header>
+		<div id="wrap">
+			<div id="header">
 				<h2>Synopsis</h2>
 				<p>This page is a take home coding project for <a href="http://formstack.com">Formstack.com</a></p>
 				<h2>Objective</h2>
@@ -125,22 +139,21 @@
 			        <li>Do not use any Formstack libraries or SDKs</li>
 			    </ul>
 				<p class="note">**note: best viewed in Chrome or Safari</p>
-			</header>
-			<section id="main">
-				<section id="embedded_form">
+			</div>
+			<div id="main">
+				<div id="embedded_form">
 					<script type="text/javascript" src="http://www.formstack.com/forms/js.php?999417-qrksyjF1z4-v2"></script><noscript><a href="http://www.formstack.com/forms/todd-interview_test" title="Online Form">Online Form - Interview Test</a></noscript><div style="text-align:right; font-size:x-small; display: none"><a href="http://www.formstack.com/" title="HTML Form Maker">Formstack - HTML Form Maker</a></div>
-				</section>
-				<section id="chart_wrap">
+				</div>
+				<div id="chart_wrap">
 					<canvas id="pie_chart_canvas" width="210" height="210"></canvas>
 					<ul id="chart_legend">
-						<li id="yes_legend">Yes</li>
-						<li id="no_legend">No</li>
+						<li id="yes_legend">Yes <span id="num_yes"></span></li>
+						<li id="no_legend">No <span id="num_no"></span></li>
 					</ul>
-					<aside>Total guests coming: <span id="num_guests"></span></aside>
-				</section>
-			</section>
-			<footer></footer>
-		</section>
+					<div>Total guests coming: <span id="num_guests"></span></div>
+				</div>
+			</div>
+		</div>
 		<script>
 		var form_id = 999417;	
 		
@@ -312,6 +325,8 @@
 				}
 				
 				$("#num_guests").text(total_guests);
+				$("#num_yes").text('('+num_yes+')');
+				$("#num_no").text('('+num_no+')');
 			}
 			
 			function parseData(data) {
