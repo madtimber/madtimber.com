@@ -3,51 +3,52 @@
 // Take Home API (THA)
 class THA {
 	
-	private static $QURL_API_URL = 'http://www.qurl.com/automate.php?url=';
+	private static $QURL_API_URL = 'http://qurl.com/automate.php?url=';
 	
-	private static $DEL_USSERNAME = '';
-	private static $DEL_PASSWORD = '';
-	private static $DELICIOUS_API_URL = "https://$DEL_USSERNAME:$DEL_PASSWORD@api.del.icio.us/v1/posts/get?url=";
+	private static $DEL_USERNAME = 'madtimber';
+	private static $DEL_PASSWORD = 'ewallin1!';
+	private static $DELICIOUS_API_URL = "https://api.del.icio.us/v1/posts/get?url=";
 	
 	public static function call_qurl($url) {
-		header('Content-Type: text/plain');
-		header('Cache-Control: no-cache');
 		
-		$qurl_uri = $QURL_API_URL.urlencode($url);
+		$qurl_uri = self::$QURL_API_URL.urlencode($url);
 		
-		curl_get($qurl_uri);
+		$options = array(
+			CURLOPT_TIMEOUT => 5
+		);
+		
+		return self::curl_get($qurl_uri, $options);
 	}
 	
 	public static function call_delicious($url) {
-		header('Content-Type: text/xml');
-		header('Cache-Control: no-cache');
 		
-		$del_uri = $DELICIOUS_API_URL.urlencode($url);
+		$del_uri = self::$DELICIOUS_API_URL.urlencode($url);
 		
-		curl_get($del_uri);
+		$options = array(
+			CURLOPT_USERPWD => self::$DEL_USERNAME.":".self::$DEL_PASSWORD,
+			CURLOPT_TIMEOUT => 5
+		);
+		
+		return self::curl_get($del_uri, $options);
 	}
 	
-	private function curl_get($url, $headers = null) {
+	private function curl_get($url, array $options = array()) {
 		$result = false;
-		$retries = 3;
+		$errors = null;
+		
+		$default_options = array(
+			CURLOPT_HEADER => 0,
+			CURLOPT_RETURNTRANSFER => TRUE
+		);
 		
 		$curl = curl_init($url);
+		curl_setopt_array($curl, ($options + $default_options));
 		
-		if($curl) {
-			
-			if($headers !== null && is_array($headers)) {
-				curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-			}
+		$result = curl_exec($curl);
 		
-			while(($result === false) && (--$retries > 0)) {
-				$result = curl_exec($curl);
-			}
-		
-			curl_close($curl);
-		}
+		curl_close($curl);
 		
 		return $result;
 	}
 }
-
 ?>

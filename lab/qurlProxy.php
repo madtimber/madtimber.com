@@ -1,10 +1,11 @@
 <?php 
-	$QURL_API_URL = 'http://www.qurl.com/automate.php?url=';
-	
-	$url = $QURL_API_URL . urlencode($_GET['url']);
-	
-	header('Content-Type: text/plain');
+	require_once('tha.php');
 	header('Cache-Control: no-cache');
+	header('Content-Type: text/plain');
 	
-	echo file_get_contents($url);
+	$url = $_GET['url'];
+	
+	$result = THA::call_qurl($url);
+	
+	echo $result;
 ?>
