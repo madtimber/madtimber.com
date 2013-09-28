@@ -1,478 +1,471 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8"/>
-                <meta name="google-site-verification" content="n5dNyiCAMVS4lEbjwtl_ufmE8l5whFnD2ZRN4gRQDFs" />
-		<title>Madtimber - Web Development, Web Design, and User Experience</title>
-		<link type="text/css" href="css/styles.css" rel="stylesheet">
-		<link type="text/css" href="css/reset.css" rel="stylesheet">
-		<link type="text/css" href="css/jquery.fancybox-1.3.1.css" rel="stylesheet">
-		<!--[if gte IE 7]>
-		<link type="text/css" href="css/ie.css" rel="stylesheet">
-		<![endif]-->
-		<!--[if lt IE 7]>
-		<link type="text/css" href="css/ie6.css" rel="stylesheet">
-		<![endif]-->
-		<script type="text/javascript">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="google-site-verification" content="n5dNyiCAMVS4lEbjwtl_ufmE8l5whFnD2ZRN4gRQDFs" />
+        <title>Madtimber - Web Development, Web Design, and User Experience</title>
+        <link type="text/css" href="css/styles.css" rel="stylesheet">
+        <link type="text/css" href="css/reset.css" rel="stylesheet">
+        <link type="text/css" href="css/jquery.fancybox-1.3.1.css" rel="stylesheet">
+        <!--[if gte IE 7]>
+        <link type="text/css" href="css/ie.css" rel="stylesheet">
+        <![endif]-->
+        <!--[if lt IE 7]>
+        <link type="text/css" href="css/ie6.css" rel="stylesheet">
+        <![endif]-->
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-309415-3']);
+        _gaq.push(['_setDomainName', '.madtimber.com']);
+        _gaq.push(['_trackPageview']);
 
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-309415-3']);
-		  _gaq.push(['_setDomainName', '.madtimber.com']);
-		  _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
 
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
+        <!-- Begin Inspectlet Embed Code -->
+        <script type="text/javascript" id="inspectletjs">
+        var __insp = __insp || [];
+        __insp.push(['wid', 1988802414]);
+        (function() {
+            var a = window.onload;
+            function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspect/1988802414.js'; document.getElementsByTagName("head")[0].appendChild(insp); }
+            window.onload = (typeof window.onload != 'function') ? __ldinsp : function() { a(); __ldinsp(); };
+            })();
+        </script>
+        <!-- End Inspectlet Embed Code -->
+    </head>
+    <body>
+        <a id="home"></a>
+        <div id="main_wrapper">
+            <div id="header">
+                <h1>MadTimber: Development, Design, Experience</h1>
+            </div>
 
-		</script>
-		<!-- Begin Inspectlet Embed Code -->
-<script type="text/javascript" id="inspectletjs">
-	var __insp = __insp || [];
-	__insp.push(['wid', 1988802414]);
-	(function() {
-		var a = window.onload;
-		function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspect/1988802414.js'; document.getElementsByTagName("head")[0].appendChild(insp); }
-		window.onload = (typeof window.onload != 'function') ? __ldinsp : function() { a(); __ldinsp(); };
-	})();
-</script>
-<!-- End Inspectlet Embed Code -->
-	</head>
-	
-	<body>
-		<a id="home"></a>
-		<div id="main_wrapper">
-			<div id="header">
-				<h1>MadTimber: Development, Design, Experience</h1>
-			</div>
-			
-			<!-- NAV SECTION -->
-			<div id="nav"> 
-				<ul>
-					<!-- ><li><a href="#home">HOME</a></li> -->
-					<li><a href="#serv">SERVICES</a></li>
-					<li><a href="#wrk">WORK</a></li>
-					<!-- ><li><a href="#" >BLOG</a></li> -->
-					<!-- ><li><a href="#" >MAD LAB</a></li> -->
-					<li><a href="#abt">ABOUT</a></li>
-					<li><a href="#cont">CONTACT</a></li>
-					<li><a href="#home" id="up_nav_link" >BACK UP</a></li>
-				</ul>
-			</div><!-- END NAV SECTION -->
-		
-			<div id="content_wrapper">			
-				<div id="content">
-					<p id="salutation">
-						Hello.
-					</p>
-					<p class="intro">
-						I'm Todd Baker, a freelance <span>Web Developer</span> and <span>Designer</span>.
-					</p>
-					<p class="intro">I specialize in <span>User Interface</span> design/architecture of applications.</p>
-					<p class="intro last_intro">I also sling code in Javascript, PHP, Python, and Java.</p>
-					
-					<!-- SERVICES SECTION -->	
-					<h2 id="services_banner" class="section_banner">My Services...</h2>
-					<a id="serv"></a>
-					<div id="whatido" class="section">
-						<h2>WHAT I DO</h2>
-						<div id="web_dev_section">
-							<div class="description_section">
-								<h1>Web Development &nbsp;&nbsp;>></h1>
-								<p>
-									I’ve been developing for the web for over 10 years, of which six have been in a professional setting.  The list to the right lists most (but not all) technologies and methodologies that I’ve either worked extensively with, or are currently using right now.
-								</p>
-								<p>
-									I’m very familiar with MVC architecture as well as front-end best practices with respects to: Ajax, performance, and cross browser techniques.
-								</p>
-								<p>
-									Some of the tools I use include:  textmate, eclipse, Photoshop, Fireworks, Illustrator, and Parallels.
-								</p>
-							</div>
-							<div id="dev_skill_section">
-								<div class="skill_column">
-									<ul id="front_end_list">
-										<li>HTML</li>
-										<li>CSS</li>
-										<li>AJAX</li>
-										<li>Javascript
-											<ul>
-												<li>jQuery</li>
-												<li>mooTools</li>
-												<li>YUI</li>
-											</ul>
-										</li>
-									</ul>
-									<ul id="database_list">
-										<li>MySQL</li>
-										<li>MSSQL</li>
-										<li>Cassandra</li>
-									</ul>
-								</div>
-								<div class="skill_column">
-									<ul id="server_side_list">
-										<li>Java
-											<ul>
-												<li>Struts</li>
-												<li>Spring</li>
-											</ul>
-										</li>
-										<li>PHP
-											<ul>
-												<li>CakePHP</li>
-												<li>CodeIgnighter</li>
-												<li>Agavi</li>
-												<li>WordPress</li>
-											</ul>
-										</li>
-										<li>Python
-											<ul>
-												<li>Django</li>
-											</ul>
-										</li>
-										<li>C#/.Net</li>
-									</ul>
-								</div>
-								<div class="skill_column">
-									<ul id="api_list">
-										<li>APIs
-											<ul>
-												<li>Salesforce</li>
-												<li>Delicious</li>
-												<li>Facebook</li>
-												<li>Twitter</li>
-												<li>Digg</li>
-											</ul>
-										</li>
-									</ul>
-									<ul id="other_list">
-										<li>Apache</li>
-										<li>Memcache</li>
-										<li>TDD</li>
-										<li>Unit Testing</li>
-										<li>Agile/Scrum</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div id="ux_section">
-							<div class="description_section">
-								<h1>User Experience &nbsp;&nbsp;>></h1>
-								<p>
-								Putting your users' needs first in any project will always yield great results.  That's why I use these techniques extensively through out the design process.
-								</p>
-								<p>
-								Each of these deliverables can easily be scaled to the level thats appropriate for the project, but they each should be done on some level to ensure that your product matches the user's mental model.
-								</p>
-							</div>
-							<div id="ux_skill_section">
-								<ul>
-									<li>Information Architecture</li>
-									<li>Wire Framing</li>
-									<li>Prototyping</li>
-									<li>Usability Testing</li>
-								</ul>
-							</div>
-						</div>
-					</div><!-- SERVICES SECTION -->
-									
-					<!-- WORK SECTION -->
-					<h2 id ="mywork_banner" class="section_banner">What I've done in the past...</h2>
-					<a id="wrk"></a>
-					<div id="mywork" class="section">
-						<h2>MY WORK</h2>
-						<p>
-							I’ve been fortunate to work at some great startups (one, who isn't such a startup anymore!):
-						</p>
-						<div id="career_listing">
-							<h3>Full Time:</h3>
-							<a id="et_link" href="http://www.exacttarget.com" target="_blank" class="work_link"><img src="images/et.png" title="ExactTarget" alt="ExactTarget" /></a>
-							<a id="cc_link" href="http://www.chacha.com" target="_blank" class="work_link"><img src="images/chacha.png" title="ChaCha" alt="ChaCha" /></a>
-							<a id="cb_link" href="http://www.compendiumblogware.com" target="_blank" class="work_link"><img src="images/cb.png" title="Compendium Blogware" alt="Compendium Blogware" /></a>
-							<h3 class="clearBoth">Freelance/Contractor:</h3>
-							<a id="t_link" href="http://www.tuitivegroup.com" target="_blank"><img src="images/tuitive.png" title="Tuitive" alt="Tuitive" /></a>
-						</div>
-						<p>
-							With the bulk of my professional career coming from within private companies, I’m a little limited on how much of my work I can 
-							publicly show, but here are a few things to check out:
-						</p>
-						<div class="portfolio_item">
-							<h4>ChaCha - Answer Detail Page</h4>
-							<a id="cc-answer-detail-thumb" rel="port1" href="images/portfolio/qna-full.jpg"><img src="images/portfolio/cc-answerdetail-thumb.jpg" width="326" height="197" alt="Cha Cha - Answer Detail Page" class="port_thumb" /></a>
-							<a id="cc-answer-detail-1" rel="port1" href="images/portfolio/qna-wireframe2.png" class="hidden" title="Cha Cha - Answer Detail Page Wireframe"></a>
-							<a id="cc-answer-detail-2" rel="port1" href="images/portfolio/qna-wireframe.png" class="hidden" title="Cha Cha - Answer Detail Page Wireframe"></a>
-							<dl class="project_resp">
-								<dt>Responsible for:</dt>
-								<dd>
-									<ul>
-										<li>Information Architecture</li>
-										<li>Visual Design</li>
-										<li>HTML</li>
-										<li>CSS</li>
-										<li>Javascript</li>
-										<li>Java/Struts Development</li>
-									</ul>
-								</dd>
-							</dl>
-						</div>
-						<div class="portfolio_item">
-							<h4>ChaCha - Guide Application</h4>
-							<a id="cc-guide-app-full" rel="port2" href="images/portfolio/gen1.png"><img src="images/portfolio/cc-guideapp-thumb.jpg" width="326" height="197" alt="Cha Cha Guide Application" class="port_thumb"></a>
-							<a id="cc-guide-app-1" rel="port2" href="images/portfolio/gen2.png" class="hidden" title="Cha Cha Guide Application - General Guide Screen"></a>
-							<a id="cc-guide-app-2" rel="port2" href="images/portfolio/gen3.png" class="hidden" title="Cha Cha Guide Application - General Guide Screen"></a>
-							<a id="cc-guide-app-3" rel="port2" href="images/portfolio/qv1.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
-							<a id="cc-guide-app-4" rel="port2" href="images/portfolio/qv2.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
-							<a id="cc-guide-app-5" rel="port2" href="images/portfolio/qv4.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
-							<a id="cc-guide-app-6" rel="port2" href="images/portfolio/transcriber.png" class="hidden" title="Cha Cha Guide Application - Transcriber Screen"></a>
-							<a id="cc-guide-app-7" rel="port2" href="images/portfolio/expedite-redesign1.png" class="hidden" title="Cha Cha Guide Application - Expeditor Redesign Wirframe"></a>
-							<a id="cc-guide-app-8" rel="port2" href="images/portfolio/expedite-redesign2.png" class="hidden" title="Cha Cha Guide Application  - Expeditor Redesign Wirframe"></a>
-							<a id="cc-guide-app-9" rel="port2" href="images/portfolio/expedite-redesign3.png" class="hidden" title="Cha Cha Guide Application  - Expeditor Redesign Wirframe"></a>
-							<dl class="project_resp">
-								<dt>Responsible for:</dt>
-								<dd>
-									<ul>
-										<li>Information Architecture</li>
-										<li>Visual Design</li>
-										<li>HTML</li>
-										<li>CSS</li>
-										<li>Javascript</li>
-										<li>Java/Struts Development</li>
-									</ul>
-								</dd>
-							</dl>
-						</div>
-						<div class="portfolio_item">
-							<h4>Compendium - Take Home</h4>
-							<a id="cb" href="/lab/cb.html"><img src="images/portfolio/cb-takehome-thumb.jpg" width="326" height="197" alt="Compendium Take Home Interview" class="port_thumb"></a>
-							<dl class="project_resp">
-								<dt>Responsible for:</dt>
-								<dd>
-									<ul>
-										<li>Visual Design</li>
-										<li>HTML</li>
-										<li>CSS</li>
-										<li>Javascript</li>
-										<li>PHP Development</li>
-									</ul>
-								</dd>
-							</dl>
-						</div>
-						<div class="portfolio_item">
-							<h4>Personal - Hamming Distance</h4>
-							<a id="hamming" href="images/portfolio/hamming-full.jpg"><img src="images/portfolio/hamming-thumb.jpg" width="326" height="197" alt="Hamming Distance" class="port_thumb"></a>
-							<dl class="project_resp">
-								<dt>Responsible for:</dt>
-								<dd>
-									<ul>
-										<li>Visual Design</li>
-										<li>HTML</li>
-										<li>CSS</li>
-										<li>Javascript</li>
-										<li>PHP Development</li>
-									</ul>
-								</dd>
-							</dl>
-						</div>
-					</div><!-- END WORK SECTION -->
-									
-					<!-- ABOUT SECTION -->
-					<h2 class="section_banner">Who is Todd?...</h2>
-					<a id="abt"></a>
-					<div id="about" class="section">
-						<h2>ABOUT ME</h2>
-						<div id="bio">
-							<p>
-								I've been developing for the web for over <strong>10 years</strong>, six of which have been in a professional setting. My passion is designing and developing web sites and applications that are user centric and contain only the most impeccable markup and code.
-							</p>
+            <!-- NAV SECTION -->
+            <div id="nav">
+                <ul>
+                    <!-- ><li><a href="#home">HOME</a></li> -->
+                    <li><a href="#serv">SERVICES</a></li>
+                    <li><a href="#wrk">WORK</a></li>
+                    <!-- ><li><a href="#" >BLOG</a></li> -->
+                    <!-- ><li><a href="#" >MAD LAB</a></li> -->
+                    <li><a href="#abt">ABOUT</a></li>
+                    <li><a href="#cont">CONTACT</a></li>
+                    <li><a href="#home" id="up_nav_link" >BACK UP</a></li>
+                </ul>
+            </div><!-- END NAV SECTION -->
 
-							<p>
-								While I’m most comfortable whipping out a prototype, information architecture, interaction diagram, or jQuery plugin, I’m very well versed with server side technologies and even welcome data persistence challenges.
-							</p>
+            <div id="content_wrapper">
+                <div id="content">
+                    <p id="salutation">
+                        Hello.
+                    </p>
+                    <p class="intro">
+                        I'm Todd Baker, a freelance <span>Web Developer</span> and <span>Designer</span>.
+                    </p>
+                    <p class="intro">I specialize in <span>User Interface</span> design/architecture of applications.</p>
+                    <p class="intro last_intro">I also sling code in Javascript, PHP, Python, and Java.</p>
 
-							<p>
-								In my spare time, you can find me checking out almost any band that I can find, watching movies (Caddyshack for the 56th time), playing guitar or hitting the links for a nice round of small ball.
-							</p>
+                    <!-- SERVICES SECTION -->
+                    <h2 id="services_banner" class="section_banner">My Services...</h2>
+                    <a id="serv"></a>
+                    <div id="whatido" class="section">
+                        <h2>WHAT I DO</h2>
+                        <div id="web_dev_section">
+                            <div class="description_section">
+                                <h1>Web Development &nbsp;&nbsp;>></h1>
+                                <p>
+                                    I’ve been developing for the web for over 10 years, of which six have been in a professional setting.  The list to the right lists most (but not all) technologies and methodologies that I’ve either worked extensively with, or are currently using right now.
+                                </p>
+                                <p>
+                                    I’m very familiar with MVC architecture as well as front-end best practices with respects to: Ajax, performance, and cross browser techniques.
+                                </p>
+                                <p>
+                                    Some of the tools I use include:  textmate, eclipse, Photoshop, Fireworks, Illustrator, and Parallels.
+                                </p>
+                            </div>
+                            <div id="dev_skill_section">
+                                <div class="skill_column">
+                                    <ul id="front_end_list">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>AJAX</li>
+                                        <li>Javascript
+                                            <ul>
+                                                <li>jQuery</li>
+                                                <li>mooTools</li>
+                                                <li>YUI</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul id="database_list">
+                                        <li>MySQL</li>
+                                        <li>MSSQL</li>
+                                        <li>Cassandra</li>
+                                    </ul>
+                                </div>
+                                <div class="skill_column">
+                                    <ul id="server_side_list">
+                                        <li>Java
+                                            <ul>
+                                                <li>Struts</li>
+                                                <li>Spring</li>
+                                            </ul>
+                                        </li>
+                                        <li>PHP
+                                            <ul>
+                                                <li>CakePHP</li>
+                                                <li>CodeIgnighter</li>
+                                                <li>Agavi</li>
+                                                <li>WordPress</li>
+                                            </ul>
+                                        </li>
+                                        <li>Python
+                                            <ul>
+                                                <li>Django</li>
+                                            </ul>
+                                        </li>
+                                        <li>C#/.Net</li>
+                                    </ul>
+                                </div>
+                                <div class="skill_column">
+                                    <ul id="api_list">
+                                        <li>APIs
+                                            <ul>
+                                                <li>Salesforce</li>
+                                                <li>Delicious</li>
+                                                <li>Facebook</li>
+                                                <li>Twitter</li>
+                                                <li>Digg</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul id="other_list">
+                                        <li>Apache</li>
+                                        <li>Memcache</li>
+                                        <li>TDD</li>
+                                        <li>Unit Testing</li>
+                                        <li>Agile/Scrum</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ux_section">
+                            <div class="description_section">
+                                <h1>User Experience &nbsp;&nbsp;>></h1>
+                                <p>
+                                Putting your users' needs first in any project will always yield great results.  That's why I use these techniques extensively through out the design process.
+                                </p>
+                                <p>
+                                Each of these deliverables can easily be scaled to the level thats appropriate for the project, but they each should be done on some level to ensure that your product matches the user's mental model.
+                                </p>
+                            </div>
+                            <div id="ux_skill_section">
+                                <ul>
+                                    <li>Information Architecture</li>
+                                    <li>Wire Framing</li>
+                                    <li>Prototyping</li>
+                                    <li>Usability Testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- SERVICES SECTION -->
 
-							<p>Current Home: <span>Indianapolis, IN</span></p>
-						</div>
-						<div id="social_networks">
-							<p>You can find more of me here:</p>
-							<div id="social_icons_holder">
-								<a href="http://www.twitter.com/madtimber" target="_blank"><img src="images/twitter.png" alt="twitter profile" title="twitter profile"/></a>
-								<a href="http://www.linkedin.com/pub/todd-baker/1/a73/5ba"><img src="images/linkedin.png" alt="linkedIn profile" title="linkedIn profile"/></a>
-								<a href="http://digg.com/users/madtimber"><img src="images/digg.png" alt="digg profile" title="digg profile"/></a>
-								<a href="http://delicious.com/madtimber"><img src="images/delicious.png" alt="delicious links" title="delicious links"/></a>
-								<a href="http://blip.fm/madtimber"><img src="images/blip_48.png" alt="blip.fm profile" title="blip.fm profile"/></a>
-								<a href="http://toddlb.tumblr.com/"><img src="images/tumblr_48.png" alt="tumblr profile" title="tumblr profile"/></a>
-							</div>
-							<a id="resume_dwnload_link" href="./docs/resume_todd_baker.pdf">Download my resume (PDF)</a>
-						</div>
-					</div><!-- END ABOUT SECTION -->
-					
-					<!-- CONTACT SECTION -->
-					<h2 id="contact_banner" class="section_banner">Hit me up...</h2>
-					<a id="cont"></a>
-					<div id="contact" class="section">
-						<h2>SAY HELLO</h2>
-						<div id="contact_blurb">
-							<p>
-								Feel free to send me an email anytime.  If its just a ‘hey, how ya doin’ email, it may take me a day or two to get back to you, but I will respond.
-							</p>
+                    <!-- WORK SECTION -->
+                    <h2 id ="mywork_banner" class="section_banner">What I've done in the past...</h2>
+                    <a id="wrk"></a>
+                    <div id="mywork" class="section">
+                        <h2>MY WORK</h2>
+                        <p>
+                            I’ve been fortunate to work at some great startups (one, who isn't such a startup anymore!):
+                        </p>
+                        <div id="career_listing">
+                            <h3>Full Time:</h3>
+                            <a id="et_link" href="http://www.exacttarget.com" target="_blank" class="work_link"><img src="images/et.png" title="ExactTarget" alt="ExactTarget" /></a>
+                            <a id="cc_link" href="http://www.chacha.com" target="_blank" class="work_link"><img src="images/chacha.png" title="ChaCha" alt="ChaCha" /></a>
+                            <a id="cb_link" href="http://www.compendiumblogware.com" target="_blank" class="work_link"><img src="images/cb.png" title="Compendium Blogware" alt="Compendium Blogware" /></a>
+                            <h3 class="clearBoth">Freelance/Contractor:</h3>
+                            <a id="t_link" href="http://www.tuitivegroup.com" target="_blank"><img src="images/tuitive.png" title="Tuitive" alt="Tuitive" /></a>
+                        </div>
+                        <p>
+                            With the bulk of my professional career coming from within private companies, I’m a little limited on how much of my work I can 
+                            publicly show, but here are a few things to check out:
+                        </p>
+                        <div class="portfolio_item">
+                            <h4>ChaCha - Answer Detail Page</h4>
+                            <a id="cc-answer-detail-thumb" rel="port1" href="images/portfolio/qna-full.jpg"><img src="images/portfolio/cc-answerdetail-thumb.jpg" width="326" height="197" alt="Cha Cha - Answer Detail Page" class="port_thumb" /></a>
+                            <a id="cc-answer-detail-1" rel="port1" href="images/portfolio/qna-wireframe2.png" class="hidden" title="Cha Cha - Answer Detail Page Wireframe"></a>
+                            <a id="cc-answer-detail-2" rel="port1" href="images/portfolio/qna-wireframe.png" class="hidden" title="Cha Cha - Answer Detail Page Wireframe"></a>
+                            <dl class="project_resp">
+                                <dt>Responsible for:</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Information Architecture</li>
+                                        <li>Visual Design</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Javascript</li>
+                                        <li>Java/Struts Development</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="portfolio_item">
+                            <h4>ChaCha - Guide Application</h4>
+                            <a id="cc-guide-app-full" rel="port2" href="images/portfolio/gen1.png"><img src="images/portfolio/cc-guideapp-thumb.jpg" width="326" height="197" alt="Cha Cha Guide Application" class="port_thumb"></a>
+                            <a id="cc-guide-app-1" rel="port2" href="images/portfolio/gen2.png" class="hidden" title="Cha Cha Guide Application - General Guide Screen"></a>
+                            <a id="cc-guide-app-2" rel="port2" href="images/portfolio/gen3.png" class="hidden" title="Cha Cha Guide Application - General Guide Screen"></a>
+                            <a id="cc-guide-app-3" rel="port2" href="images/portfolio/qv1.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
+                            <a id="cc-guide-app-4" rel="port2" href="images/portfolio/qv2.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
+                            <a id="cc-guide-app-5" rel="port2" href="images/portfolio/qv4.png" class="hidden" title="Cha Cha Guide Application - Expeditor Screen"></a>
+                            <a id="cc-guide-app-6" rel="port2" href="images/portfolio/transcriber.png" class="hidden" title="Cha Cha Guide Application - Transcriber Screen"></a>
+                            <a id="cc-guide-app-7" rel="port2" href="images/portfolio/expedite-redesign1.png" class="hidden" title="Cha Cha Guide Application - Expeditor Redesign Wirframe"></a>
+                            <a id="cc-guide-app-8" rel="port2" href="images/portfolio/expedite-redesign2.png" class="hidden" title="Cha Cha Guide Application  - Expeditor Redesign Wirframe"></a>
+                            <a id="cc-guide-app-9" rel="port2" href="images/portfolio/expedite-redesign3.png" class="hidden" title="Cha Cha Guide Application  - Expeditor Redesign Wirframe"></a>
+                            <dl class="project_resp">
+                                <dt>Responsible for:</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Information Architecture</li>
+                                        <li>Visual Design</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Javascript</li>
+                                        <li>Java/Struts Development</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="portfolio_item">
+                            <h4>Compendium - Take Home</h4>
+                            <a id="cb" href="/lab/cb.html"><img src="images/portfolio/cb-takehome-thumb.jpg" width="326" height="197" alt="Compendium Take Home Interview" class="port_thumb"></a>
+                            <dl class="project_resp">
+                                <dt>Responsible for:</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Visual Design</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Javascript</li>
+                                        <li>PHP Development</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="portfolio_item">
+                            <h4>Personal - Hamming Distance</h4>
+                            <a id="hamming" href="images/portfolio/hamming-full.jpg"><img src="images/portfolio/hamming-thumb.jpg" width="326" height="197" alt="Hamming Distance" class="port_thumb"></a>
+                            <dl class="project_resp">
+                                <dt>Responsible for:</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Visual Design</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Javascript</li>
+                                        <li>PHP Development</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div><!-- END WORK SECTION -->
 
-							<p>
-								If you’re inquiring about hiring me for a project, please give me as much info as possible pertaining to the scope, including (if applicable):  deadlines, budget, technical requirements, etc.
-							</p>
+                    <!-- ABOUT SECTION -->
+                    <h2 class="section_banner">Who is Todd?...</h2>
+                    <a id="abt"></a>
+                    <div id="about" class="section">
+                        <h2>ABOUT ME</h2>
+                        <div id="bio">
+                            <p>
+                                I've been developing for the web for over <strong>10 years</strong>, six of which have been in a professional setting. My passion is designing and developing web sites and applications that are user centric and contain only the most impeccable markup and code.
+                            </p>
 
-							<p>
-								I make it a point to never quote a price for any project until I have a full understanding of your needs.
-							</p>
-							<p id="work_status">Currently accepting new projects.</p>
-						</div>
-						<form id="contact_form" method="POST" target="contact.php">
-							<span id="required_msg">* all fields required</span>
-							<div class="inset_drop small_shadow_holder"><input id="name" name="name" type="text" value="name" tabindex="1"/></div>
-							<div class="inset_drop small_shadow_holder"><input id="email" name="email" type="text" value="email" tabindex="2"/></div>
-							<div class="inset_drop"><textarea id="message" name="message" value="message" tabindex="3">message</textarea></div>
-							<span id="confirm_msg"></span>
-							<input id="btn_submit_cf" type="submit" value="SEND" tabindex="4"/>
-						</form>
-					</div><!-- END CONTACT SECTION -->				
-					
-				</div><!-- END CONTENT -->
-			</div><!-- END CONTENT_WRAPPER -->
-			
-			<div id="footer">&copy; 2010 Todd Baker - Designed with Photoshop on a iMac</div>
-				
-		</div> <!-- END MAIN_WRAPPER -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.fancybox-1.3.1.pack.js"></script>
-		<script type="text/javascript" src="js/jquery.easing-1.3.pack.js"></script>
-		<script type="text/javascript" src="http://click.peepsy.io/socket.io/socket.io.js"></script>
-		<script type="text/javascript" src="http://click.peepsy.io/js/track.js"></script>
-		<script>
-			$(document).ready(function() {
-				
-				// form blur/focus effects
-				$("#contact_form input, textarea").focus(function() {
-					if(this.value == this.id) {
-						$(this).val('');
-					}
-				}).blur(function() {
-					if(this.value == ''){
-						this.value = this.id;
-					} 
-				});
-				
-				// scrolling nav
-				$("#nav a").click(function(e) {
-					var anchor = this.href.split('#')[1];
-					var scrollTo = $("a#" + anchor + "");
+                            <p>
+                                While I’m most comfortable whipping out a prototype, information architecture, interaction diagram, or jQuery plugin, I’m very well versed with server side technologies and even welcome data persistence challenges.
+                            </p>
 
-					$('html, body').animate({
-						scrollTop: scrollTo.offset().top-45
-						}, 
-						900, 
-						'swing'
-					);
-					
-					return false;
-				});
-				
-				
-				// back-up button toggle
-				$(window).scroll(function() {
-					var scrollYPos = $(this).scrollTop();
-					
-					if(scrollYPos > 700) {
-						$("#up_nav_link").fadeIn(400, function() {
-							$(this).unbind('scroll');
-						});
-					}
-				});
-				
-				
-				// portfolio image galleries
-				function formatTitle(title, currentArray, currentIndex, currentOpts) {
-				    return '<div id="tip7-title"><span><a href="javascript:;" onclick="$.fancybox.close();"><img src="images/closelabel.gif" /></a></span>' + (title && title.length ? '<b>' + title + '</b>' : '' ) + 'Image ' + (currentIndex + 1) + ' of ' + currentArray.length + '</div>';
-				};
-				
-				$("a#cc-answer-detail-thumb, a#cc-guide-app-full, a#hamming").fancybox({
-					'transitionIn'	:	'elastic',
-					'transitionOut'	:	'elastic',
-					'speedIn'		:	600, 
-					'speedOut'		:	200,
-					'titlePosition' :   'inside',
-					'titleFormat'  	: 	formatTitle,
-					'cyclic'		:   true, 
-					'autoScale'		: 	true,
-					'autoDimensions': 	true
-				});
-				
-				
-				// hijack the default submit
-				$("#contact_form").submit(function(e) {
-					
-					// validate the data
-					var isValid = true;
-					var name = $("#name").val();
-					var email = $("#email").val();
-					var message = $("#message").val();
-					
-					if(name == '' || name == 'name'){
-						$("#name").parent().css({"border": "2px solid red"});
-						isValid = false;
-					} else {
-						$("#name").parent().css({"border": "none"});
-					}
-					
-					if(message == '' || message == 'message'){
-						$("#message").parent().css({"border": "2px solid red"});
-						isValid = false;
-					} else {
-						$("#message").parent().css({"border": "none"});
-					}
-					
-					if(email == '' || email == 'email'){
-						$("#email").parent().css({"border": "2px solid red"});
-						isValid = false;
-					} else if(!(/^[a-zA-Z0-9_\.\-]+\@([a-zA-Z0-9\-]+\.)+[a-zA-Z0-9]{2,4}$/.test(email))) {
-						$("#email").parent().css({"border": "2px solid red"});
-						isValid = false;
-					} else {
-						$("#email").parent().css({"border": "none"});
-					}
-					
-					
-					if(!isValid) {return false;}
-					
-					var data = {};
-					$(this).find("input, textarea").each(function() {
-						data[this.id] = this.value;
-					});
-					
-					$.ajax({
-						url: 'contact.php',
-						data: (data),
-						dataType: 'json',
-						type: 'POST',
-						success: function(resp) {
-							if(resp.success == true) {
-								$("#confirm_msg").text("your message was sent!").css({"visibility":"visible", "color" : "#068600"});
-							} else {
-								$("#confirm_msg").text("oops, something bad happened, try again.").css({"visibility":"visible", "color" : "red"});
-							}
-						},
-						error: function(resp) {
-							$("#confirm_msg").text("oops, something bad happened, try again.").css({"visibility":"visible", "color" : "red"});
-						}
-					})
-					
-					e.preventDefault();
-					return false;
-				});
-				
-			});
-		</script>
-	</body>
+                            <p>
+                                In my spare time, you can find me checking out almost any band that I can find, watching movies (Caddyshack for the 56th time), playing guitar or hitting the links for a nice round of small ball.
+                            </p>
+
+                            <p>Current Home: <span>Indianapolis, IN</span></p>
+                        </div>
+                        <div id="social_networks">
+                            <p>You can find more of me here:</p>
+                            <div id="social_icons_holder">
+                                <a href="http://www.twitter.com/madtimber" target="_blank"><img src="images/twitter.png" alt="twitter profile" title="twitter profile"/></a>
+                                <a href="http://www.linkedin.com/pub/todd-baker/1/a73/5ba"><img src="images/linkedin.png" alt="linkedIn profile" title="linkedIn profile"/></a>
+                                <a href="http://digg.com/users/madtimber"><img src="images/digg.png" alt="digg profile" title="digg profile"/></a>
+                                <a href="http://delicious.com/madtimber"><img src="images/delicious.png" alt="delicious links" title="delicious links"/></a>
+                                <a href="http://blip.fm/madtimber"><img src="images/blip_48.png" alt="blip.fm profile" title="blip.fm profile"/></a>
+                                <a href="http://toddlb.tumblr.com/"><img src="images/tumblr_48.png" alt="tumblr profile" title="tumblr profile"/></a>
+                            </div>
+                            <a id="resume_dwnload_link" href="./docs/resume_todd_baker.pdf">Download my resume (PDF)</a>
+                        </div>
+                    </div><!-- END ABOUT SECTION -->
+
+                    <!-- CONTACT SECTION -->
+                    <h2 id="contact_banner" class="section_banner">Hit me up...</h2>
+                    <a id="cont"></a>
+                    <div id="contact" class="section">
+                        <h2>SAY HELLO</h2>
+                        <div id="contact_blurb">
+                            <p>
+                                Feel free to send me an email anytime.  If its just a ‘hey, how ya doin’ email, it may take me a day or two to get back to you, but I will respond.
+                            </p>
+
+                            <p>
+                                If you’re inquiring about hiring me for a project, please give me as much info as possible pertaining to the scope, including (if applicable):  deadlines, budget, technical requirements, etc.
+                            </p>
+
+                            <p>
+                                I make it a point to never quote a price for any project until I have a full understanding of your needs.
+                            </p>
+                            <p id="work_status">Currently accepting new projects.</p>
+                        </div>
+                        <form id="contact_form" method="POST" target="contact.php">
+                            <span id="required_msg">* all fields required</span>
+                            <div class="inset_drop small_shadow_holder"><input id="name" name="name" type="text" value="name" tabindex="1"/></div>
+                            <div class="inset_drop small_shadow_holder"><input id="email" name="email" type="text" value="email" tabindex="2"/></div>
+                            <div class="inset_drop"><textarea id="message" name="message" value="message" tabindex="3">message</textarea></div>
+                            <span id="confirm_msg"></span>
+                            <input id="btn_submit_cf" type="submit" value="SEND" tabindex="4"/>
+                        </form>
+                    </div><!-- END CONTACT SECTION -->
+
+                </div><!-- END CONTENT -->
+            </div><!-- END CONTENT_WRAPPER -->
+
+            <div id="footer">&copy; 2010 Todd Baker - Designed with Photoshop on a iMac</div>
+
+        </div> <!-- END MAIN_WRAPPER -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-1.3.1.pack.js"></script>
+        <script type="text/javascript" src="js/jquery.easing-1.3.pack.js"></script>
+        <script type="text/javascript" src="http://click.peepsy.io/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="http://click.peepsy.io/js/track.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                // form blur/focus effects
+                $("#contact_form input, textarea").focus(function() {
+                    if(this.value == this.id) {
+                        $(this).val('');
+                    }
+                }).blur(function() {
+                    if(this.value == ''){
+                        this.value = this.id;
+                    }
+                });
+
+                // scrolling nav
+                $("#nav a").click(function(e) {
+                    var anchor = this.href.split('#')[1];
+                    var scrollTo = $("a#" + anchor + "");
+
+                    $('html, body').animate({
+                        scrollTop: scrollTo.offset().top-45
+                        },
+                        900,
+                        'swing'
+                    );
+
+                    return false;
+                });
+
+                // back-up button toggle
+                $(window).scroll(function() {
+                    var scrollYPos = $(this).scrollTop();
+
+                    if(scrollYPos > 700) {
+                        $("#up_nav_link").fadeIn(400, function() {
+                            $(this).unbind('scroll');
+                        });
+                    }
+                });
+
+                // portfolio image galleries
+                function formatTitle(title, currentArray, currentIndex, currentOpts) {
+                    return '<div id="tip7-title"><span><a href="javascript:;" onclick="$.fancybox.close();"><img src="images/closelabel.gif" /></a></span>' + (title && title.length ? '<b>' + title + '</b>' : '' ) + 'Image ' + (currentIndex + 1) + ' of ' + currentArray.length + '</div>';
+                };
+
+                $("a#cc-answer-detail-thumb, a#cc-guide-app-full, a#hamming").fancybox({
+                    'transitionIn'  :   'elastic',
+                    'transitionOut' :   'elastic',
+                    'speedIn'       :   600,
+                    'speedOut'      :   200,
+                    'titlePosition' :   'inside',
+                    'titleFormat'   :   formatTitle,
+                    'cyclic'        :   true,
+                    'autoScale'     :   true,
+                    'autoDimensions':   true
+                });
+
+                // hijack the default submit
+                $("#contact_form").submit(function(e) {
+                    // validate the data
+                    var isValid = true;
+                    var name = $("#name").val();
+                    var email = $("#email").val();
+                    var message = $("#message").val();
+
+                    if(name == '' || name == 'name'){
+                        $("#name").parent().css({"border": "2px solid red"});
+                        isValid = false;
+                    } else {
+                        $("#name").parent().css({"border": "none"});
+                    }
+
+                    if(message == '' || message == 'message'){
+                        $("#message").parent().css({"border": "2px solid red"});
+                        isValid = false;
+                    } else {
+                        $("#message").parent().css({"border": "none"});
+                    }
+
+                    if(email == '' || email == 'email'){
+                        $("#email").parent().css({"border": "2px solid red"});
+                        isValid = false;
+                    } else if(!(/^[a-zA-Z0-9_\.\-]+\@([a-zA-Z0-9\-]+\.)+[a-zA-Z0-9]{2,4}$/.test(email))) {
+                        $("#email").parent().css({"border": "2px solid red"});
+                        isValid = false;
+                    } else {
+                        $("#email").parent().css({"border": "none"});
+                    }
+
+                    if(!isValid) {return false;}
+
+                    var data = {};
+                    $(this).find("input, textarea").each(function() {
+                        data[this.id] = this.value;
+                    });
+
+                    $.ajax({
+                        url: 'contact.php',
+                        data: (data),
+                        dataType: 'json',
+                        type: 'POST',
+                        success: function(resp) {
+                            if(resp.success == true) {
+                                $("#confirm_msg").text("your message was sent!").css({"visibility":"visible", "color" : "#068600"});
+                            } else {
+                                $("#confirm_msg").text("oops, something bad happened, try again.").css({"visibility":"visible", "color" : "red"});
+                            }
+                        },
+                        error: function(resp) {
+                            $("#confirm_msg").text("oops, something bad happened, try again.").css({"visibility":"visible", "color" : "red"});
+                        }
+                    })
+
+                    e.preventDefault();
+                    return false;
+                });
+
+            });
+        </script>
+    </body>
 </html>
