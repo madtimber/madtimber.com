@@ -4,6 +4,8 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
+var proxy = require('proxy-middleware');
+var url = require('url');
 var reload = browserSync.reload;
 
 gulp.task('styles', function () {
@@ -16,7 +18,15 @@ gulp.task('styles', function () {
       onError: console.error.bind(console, 'Sass error:')
     }))
     .pipe($.postcss([
-      require('autoprefixer-core')({browsers: ['last 20 version']})
+      require('autoprefixer-core')({browsers: [
+        'Android 2.3',
+        'Android >= 4',
+        'Chrome >= 20',
+        'Firefox >= 24', // Firefox 24 is the latest ESR
+        'Explorer >= 8',
+        'iOS >= 6',
+        'Opera >= 12',
+        'Safari >= 6']})
     ]))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
@@ -76,6 +86,11 @@ gulp.task('extras', function () {
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', ['styles', 'fonts'], function () {
+  // this is the small local node app running on 3000
+  // that will handle the contact form
+  var proxyOptions = url.parse('http://localhost:3000/');
+  proxyOptions.route = '/contact';
+
   browserSync({
     notify: false,
     port: 80,
@@ -84,7 +99,8 @@ gulp.task('serve', ['styles', 'fonts'], function () {
       baseDir: ['.tmp', 'app'],
       routes: {
         '/bower_components': 'bower_components'
-      }
+      },
+      middleware: [proxy(proxyOptions)]
     }
   });
 

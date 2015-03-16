@@ -180,10 +180,10 @@
         <h3>CONTACT US</h3>
         <div class="row">
           <div class="col-md-6">
-            <form class="clearfix">
-              <input type="text" class="form-control" id="name" placeholder="NAME">
-              <input type="email" class="form-control" id="email" placeholder="EMAIL">
-              <textarea class="form-control" id="message" placeholder="MESSAGE"></textarea>
+            <form class="clearfix" method="POST" action="/contact">
+              <input type="text" class="form-control" id="name" name="name" placeholder="NAME">
+              <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL">
+              <textarea class="form-control" id="message" name="message" placeholder="MESSAGE"></textarea>
               <button type="submit" class="btn btn-default">Send</button>
             </form>
           </div>

@@ -362,6 +362,11 @@ section {
       &:active {
         background-color: #693691;
       }
+
+      &.messageSent {
+        background-color: #35D837 !important;
+        border-color: #157116 !important;
+      }
     }
   }
 
