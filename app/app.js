@@ -4,13 +4,13 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var errorHandler = require('errorhandler');
 var nodemailer = require('nodemailer');
-var sendmailTransport = require('nodemailer-sendmail-transport');
+var mailConfig = require('./mail-config') || {};
 
 var app = express();
 app.use(logger('dev'));
 app.use(bodyParser());
 
-var mailTransporter = nodemailer.createTransport(sendmailTransport());
+var mailTransporter = nodemailer.createTransport(mailConfig);
 
 /**
  * This route handles the contact form.
@@ -21,8 +21,6 @@ app.post('/', function(req, res) {
   // get form params
   // send the email
   console.log(req.body);
-
-  console.log(mailTransporter);
 
   mailTransporter.sendMail({
     from: req.body.email,
