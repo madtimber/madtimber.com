@@ -1,0 +1,529 @@
+$icon-font-path: '../fonts/';
+
+/* Madtimber Variables */
+$timber-green: #759937;
+$primary-font-fam: 'Open Sans';
+$secondary-font-fam: 'Lato';
+/**/
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic|Open+Sans:700,300,400);
+
+* {
+  font-family: $primary-font-fam;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+
+  &.primary {
+    height: 60px;
+    border-radius: 0;
+    border: 0;
+
+    .navbar-brand {
+      padding: 0;
+
+      img:nth-child(1) {
+        height: 90px;
+        width: 90px;
+        float: left;
+        padding: 5px;
+        background-color: white;
+        z-index: 1000;
+        position: relative;
+      }
+
+      img:nth-child(2) {
+        height: 30px;
+        margin-top: 15px;
+        padding-left:  10px;
+      }
+    }
+  }
+
+  &.secondary {
+    height: 30px;
+    min-height: 30px;
+    background-color: $timber-green;
+    border-radius: 0;
+
+    h3 {
+      font-size: 75%;
+      color: #FFF;
+      margin: 0;
+      padding: 8px 0 0 0;
+      margin-left: 85px;
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes hero-text {
+  from {
+    opacity: 0;
+    transform: translate(0,200px);
+  }
+  to {
+    opacity: 100;
+  }
+};
+
+@keyframes hero-button {
+  from {
+    opacity: 0;
+    transform: translate(2000px,0);
+  }
+  to {
+    opacity: 100;
+  }
+};
+
+.jumbotron {
+  height: 750px;
+  background: linear-gradient(rgba(41, 82, 40, 0.41), rgba(172, 203, 171, 0.35)),
+              url('/images/forest2.jpg') no-repeat center;
+  background-size: cover;
+  background-position: bottom;
+  padding-bottom: 0;
+  margin-bottom: 0;
+
+  .container {
+    padding: 0;
+  }
+
+  .hero-text {
+    margin-top: 85px;
+
+    h1, h2 {
+      color: #FFF;
+      text-align: center;
+      animation: hero-text 1.2s cubic-bezier(0.77,0,.175,1);
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 5.5rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    a {
+        margin: 60px auto 0;
+        display: block;
+        width: 130px;
+        color: #FFF;
+        border-radius: 2px;
+        border-bottom: 3px solid #A95F0B;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        background-color: #F80;
+        padding: 4px 0px;
+        animation: hero-button 1.2s cubic-bezier(0.77,0,.175,1);
+    }
+  }
+}
+
+section {
+  padding: 60px 0;
+
+  h3 {
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 45px 0;
+    font-size: 2.1rem;
+    color: #555;
+  }
+
+  &.dark {
+    background-color: #f0f0f0;
+  }
+
+  &.green {
+    background-color: $timber-green;
+    color: white;
+  }
+}
+
+.offer {
+  h2 {
+    text-align: center;
+    font-size: 1.55rem;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    margin: 20px auto;
+    padding: 12px 0px;
+    max-width: 231px;
+  }
+
+
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      text-align: center;
+      padding: 3px 0px;
+      font-family: $secondary-font-fam;
+    }
+  }
+
+  .icon {
+    width: 162px;
+    height: 135px;
+    margin: 0 auto;
+
+    &.development {
+      padding-top: 20px;
+    }
+
+    &.experience {
+      width: 107px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .row > div {
+    margin-bottom: 60px;
+  }
+}
+
+.how {
+
+  h3 {
+    color: white;
+  }
+
+  p {
+    font-size: 1.9rem;
+    padding: 0 50px 40px;
+    text-align: center;
+    font-family: $secondary-font-fam;
+
+    &.lead {
+      font-size: 2.85rem;
+    }
+  }
+}
+
+.about {
+  .profile {
+    margin-bottom: 40px;
+  }
+
+  .social-icons {
+    //display: block;
+    //width: 110px;
+    margin: 10px 0 0 0;
+
+    a {
+      margin: 1px;
+      cursor: pointer;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  h4 {
+    font-weight: bold;
+    letter-spacing: -0.7px;
+    margin: 30px 0 0 0;
+  }
+
+  h5 {
+    font-weight: 300;
+    margin: 5px 0;
+  }
+
+  p {
+    font-family: $secondary-font-fam;
+    font-style: italic;
+    padding-top: 5px;
+    font-size: 1.6rem;
+  }
+
+  img.profile-pic {
+    // width: 100px;
+    // height: 100px;
+    max-width: 105px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.brands {
+  .brand-logo {
+    height: 90px;
+    text-align: center;
+    white-space: nowrap;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      max-height: 30px;
+
+      &.lilly {
+        max-height: 50px;
+      }
+
+      &.chacha {
+        max-height: 40px;
+      }
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  padding-bottom: 140px;
+  display: block;
+  margin-bottom: 0;
+
+  &::after {
+    content: "";
+    background: linear-gradient(rgba(41, 82, 40, 0.41), rgba(41, 82, 40, 0.41)),
+                url('/images/dumbo.jpg') no-repeat center;
+    background-size: cover;
+    background-position: bottom;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  h3 {
+    color: white;
+    margin: 0 auto 40px;
+    width: 200px;
+    font-size: 2.5rem;
+    padding: 4px 0;
+  }
+
+  form {
+    .form-control {
+      margin-bottom: 15px;
+      border-radius: 3px;
+      border: none;
+      opacity: .95;
+      font-weight: bold;
+    }
+
+    textarea {
+      height: 200px;
+      resize:none;
+    }
+
+    button {
+      width: 135px;
+      font-size: 1.6rem;
+      float: right;
+      border-bottom:2px solid #551C81 !important;
+
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #7B2DBA;
+        color: #FFF;
+        border: none;
+        outline: none !important;
+      }
+
+      &:hover {
+        background-color: #8C34D2;
+      }
+
+      &:active {
+        background-color: #693691;
+      }
+
+      &.messageSent {
+        background-color: #35D837 !important;
+        border-color: #157116 !important;
+      }
+    }
+  }
+
+  address {
+    color: white;
+    a {
+      color: yellow;
+      font-weight: bold;
+    }
+  }
+}
+
+
+footer {
+  min-height: 40px;
+  background-color: #333;
+}
+
+/* Responsive: iPhone and down */
+@media screen and (max-width: 767px) {
+
+  .navbar {
+    &.primary {
+      height: 30px;
+
+      .navbar-brand {
+        img:nth-child(1) {
+          height: 70px;
+          width: 70px;
+        }
+
+        img:nth-child(2) {
+          height: 25px;
+          margin-top: 12px;
+          padding-left:  6px;
+        }
+      }
+    }
+
+    &.secondary {
+      height: 20px;
+      min-height: 20px;
+
+      h3 {
+        padding: 3px 0 0 0;
+        margin-left: 60px;
+
+      }
+    }
+  }
+
+  .jumbotron {
+    height: 500px;
+
+    .hero-text {
+      margin-top: 75px;
+
+      h1 {
+        font-size: 4.5rem;
+        line-height: 40px;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  section {
+    padding: 30px 0;
+
+    h3 {
+      margin: 0 0 45px 0;
+      font-size: 2.5rem;
+    }
+  }
+
+  .offer {
+    h2 {
+      font-size: 1
+    }
+
+    .icon {
+      &.development {
+        margin-bottom: -40px;
+      }
+      &.experience {
+        margin-bottom: -20px;
+      }
+    }
+  }
+
+  .about {
+    h4, h5 {
+      text-align: center;
+    }
+
+    h4 {
+      margin: 20px 0 0 0;
+      font-size: 2rem;
+    }
+    h5 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      padding: 0 20px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .profile {
+      margin-bottom: 60px;
+    }
+
+    img.profile-pic {
+      //width: 150px;
+      //height: 150px;
+      max-width: 210px;
+    }
+
+    .social-icons {
+      margin: 10px auto 30px;
+      width: 172px;
+
+      a {
+        margin: 0 3px;
+      }
+
+      img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  .contact {
+    form {
+      padding: 0 10px;
+
+      button {
+        width: 100%;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+    }
+    address {
+      font-size: 90%;
+    }
+
+    address {
+      margin-top: 30px;
+    }
+
+    .email {
+      text-align: center;
+    }
+  }
+}

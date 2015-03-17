@@ -1,0 +1,8 @@
+{
+  "name": "madtimber-com",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.3",
+    "modernizr": "~2.8.1"
+  }
+}
