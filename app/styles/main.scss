@@ -24,6 +24,10 @@ $secondary-font-fam: 'Lato';
   padding-right: 0;
 }
 
+.navbar-brand img {
+  display: block;
+}
+
 .navbar {
   margin-bottom: 0;
 
@@ -33,6 +37,7 @@ $secondary-font-fam: 'Lato';
     border: 0;
 
     .navbar-brand {
+      min-width: 400px;
       padding: 0;
 
       img:nth-child(1) {
